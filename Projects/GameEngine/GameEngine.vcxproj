@@ -130,6 +130,7 @@
     <ClCompile Include="..\..\Source\GameEngine\GameObjectManager.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\HUDElement.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\InputManager.cpp" />
+    <ClCompile Include="..\..\Source\GameEngine\Manager.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\ManagerOfManagers.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\PhysicsManager.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\PoolManager.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="..\..\Source\GameEngine\GameObjectManager.h" />
     <ClInclude Include="..\..\Source\GameEngine\HUDElement.h" />
     <ClInclude Include="..\..\Source\GameEngine\InputManager.h" />
+    <ClInclude Include="..\..\Source\GameEngine\Manager.h" />
     <ClInclude Include="..\..\Source\GameEngine\ManagerOfManagers.h" />
     <ClInclude Include="..\..\Source\GameEngine\PhysicsManager.h" />
     <ClInclude Include="..\..\Source\GameEngine\PoolManager.h" />

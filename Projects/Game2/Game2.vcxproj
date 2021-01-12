@@ -19,7 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Game2\Car.cpp" />
+    <ClCompile Include="..\..\Source\Game2\Leaf.cpp" />
+    <ClCompile Include="..\..\Source\Game2\LeafManager.cpp" />
     <ClCompile Include="..\..\Source\Game2\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Game2\Car.h" />
+    <ClInclude Include="..\..\Source\Game2\Leaf.h" />
+    <ClInclude Include="..\..\Source\Game2\LeafManager.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE5D3D01-A519-4A6F-BE9B-B56DB105BFB6}</ProjectGuid>

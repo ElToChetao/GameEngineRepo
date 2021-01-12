@@ -30,10 +30,10 @@ int main( int argc, char* args[] )
 	{
 		// GameObject instances
 
-		Paddle leftPaddle(Vector2(30, RenderManager::GetInstance().SCREEN_HEIGHT / 2), "../../Media/Sprites/paddleLeft.png", "Vertical", Vector2(50, 20));
+		Paddle leftPaddle(Vector2(30, RenderManager::GetInstance().SCREEN_HEIGHT / 2), "../../Media/Sprites/Pong/paddleLeft.png", "Vertical", Vector2(50, 20));
 		leftPaddle.name = "leftPaddle";
 		Paddle rightPaddle(Vector2(RenderManager::GetInstance().SCREEN_WIDTH - 60, 
-			RenderManager::GetInstance().SCREEN_HEIGHT / 2), "../../Media/Sprites/paddleRight.png", "Vertical Arrows", Vector2(RenderManager::GetInstance().SCREEN_WIDTH - 60, 20));
+		RenderManager::GetInstance().SCREEN_HEIGHT / 2), "../../Media/Sprites/Pong/paddleRight.png", "Vertical Arrows", Vector2(RenderManager::GetInstance().SCREEN_WIDTH - 60, 20));
 		rightPaddle.name = "rightPaddle";
 
 		Ball ball;

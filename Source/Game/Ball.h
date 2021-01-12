@@ -10,7 +10,7 @@ private:
 
 public:
 	Ball() : GameObject() {
-		addSprite("../../Media/Sprites/ball.png");
+		addSprite("../../Media/Sprites/Pong/ball.png");
 		addCollider(10);
 
 		startPosition = RenderManager::GetInstance().GetScreenAdaptedPosition(0.5, 0.5);
@@ -31,6 +31,7 @@ public:
 			{
 				p->updateScore();
 			}
+
 			transform.position = startPosition;
 			deviate();
 			direction.x = 1;
@@ -58,9 +59,7 @@ public:
 		GameObject* go = PhysicsManager::GetInstance().CheckSphere(getCenterPosition(), collider->radius, this);
 		if (go != NULL) {
 			if (go->tag == "paddle") {
-				// go->getComponent<Paddle>();
-				deviate();
-				direction.x *= -1;
+				direction = go->transform.position.direction(this->transform.position);
 				speed *= 1.1;
 			}
 			AudioManager::GetInstance().PlaySound("../../Media/Sounds/1.wav", 20);

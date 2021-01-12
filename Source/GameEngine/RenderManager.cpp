@@ -129,7 +129,7 @@ LTexture* RenderManager::GetSprite(string spritePath)
     {
         int index = sprites.size();
         sprites.push_back(tempSprite);
-        printf("Sprite loaded succesfully");
+        printf("\nSprite loaded succesfully\n");
         return sprites[index];
     }
 }

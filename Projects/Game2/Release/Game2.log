@@ -1,22 +1,9 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.cpp
-  Generating code
-  139 of 320 functions (43.4%) were compiled, the rest were copied from previous compilation.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: El directorio intermedio (Release\) contiene archivos compartidos de otro proyecto (Game.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  Leaf.cpp
+D:\Git\GameEngineRepo\Source\Game2\Leaf.cpp(49,22): warning C4305: '*=': truncamiento de 'double' a 'float'
+  Generando código
+  5 of 512 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    22 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-GameEngine.lib(ManagerOfManagers.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(ManagerOfManagers.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-GameEngine.lib(InputManager.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(InputManager.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-GameEngine.lib(GameObjectManager.obj) : warning LNK4099: PDB '' was not found with 'GameEngine.lib(GameObjectManager.obj)' or at ''; linking object as if no debug info
-GameEngine.lib(TimeManager.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(TimeManager.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-GameEngine.lib(RenderManager.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(RenderManager.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-GameEngine.lib(PhysicsManager.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(PhysicsManager.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-GameEngine.lib(AudioManager.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(AudioManager.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-GameEngine.lib(Vector2.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(Vector2.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-GameEngine.lib(HUDElement.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(HUDElement.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-GameEngine.lib(Texture.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(Texture.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-GameEngine.lib(GameObject.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(GameObject.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-GameEngine.lib(Audio.obj) : warning LNK4099: PDB '' was not found with 'GameEngine.lib(Audio.obj)' or at ''; linking object as if no debug info
-GameEngine.lib(Transform.obj) : warning LNK4099: PDB '' was not found with 'GameEngine.lib(Transform.obj)' or at ''; linking object as if no debug info
-GameEngine.lib(Collider.obj) : warning LNK4099: PDB 'GameEngine.pdb' was not found with 'GameEngine.lib(Collider.obj)' or at 'C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.pdb'; linking object as if no debug info
-  Game2.vcxproj -> C:\GameEngine\GameEngineRepo\Projects\Release\Game2.exe
+    13 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  Game2.vcxproj -> D:\Git\GameEngineRepo\Projects\Release\Game2.exe

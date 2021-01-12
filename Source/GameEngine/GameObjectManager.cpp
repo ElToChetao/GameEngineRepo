@@ -16,11 +16,15 @@ void GameObjectManager::Init() {
 }
 
 void GameObjectManager::Update() {
-	for (int i = 0; i < managers.size(); i++) {
+	for (int i = managers.size()-1; i >= 0 ; i--) {
 		managers[i]->update();
 	}
-	for (int i = 0; i < gameObjects.size(); i++) {
-		gameObjects[i]->update();
+
+	for (int i = gameObjects.size()-1; i >= 0 ; i--) {
+		if (gameObjects[i] != NULL || gameObjects[i] != nullptr)
+		{
+			gameObjects[i]->update();
+		}
 	}
 }
 
@@ -33,7 +37,32 @@ void GameObjectManager::AddGameObject(GameObject* go) {
 }
 
 void GameObjectManager::RemoveGameObject(GameObject* go) {
-	gameObjects.erase(remove(gameObjects.begin(), gameObjects.end(), go), gameObjects.end());
+	for (int i = 0; i < gameObjects.size(); i++)
+	{
+		if (gameObjects[i] == go)
+		{
+			gameObjects.erase(gameObjects.begin() + i);
+		}
+	}
+}
+
+void GameObjectManager::AddGameObject(Manager* go) {
+	managers.push_back(go);
+}
+
+void GameObjectManager::RemoveGameObject(Manager* go) {
+	managers.erase(remove(managers.begin(), managers.end(), go), managers.end());
+}
+
+Manager* GameObjectManager::GetManager(string name)
+{
+	for each (Manager* manager in managers)
+	{
+		if (manager->name._Equal(name)) {
+			return manager;
+		}
+	}
+	return nullptr;
 }
 
 GameObject* GameObjectManager::Find(string name)

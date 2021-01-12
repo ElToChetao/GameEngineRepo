@@ -14,6 +14,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SaveSystem", "SaveSystem\SaveSystem.vcxproj", "{A2EB83B7-0699-4BD9-B204-803492FFF184}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game2", "Game2\Game2.vcxproj", "{FE5D3D01-A519-4A6F-BE9B-B56DB105BFB6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CCFB08AD-5A91-429D-905E-42EA934E5385} = {CCFB08AD-5A91-429D-905E-42EA934E5385}
+		{A2EB83B7-0699-4BD9-B204-803492FFF184} = {A2EB83B7-0699-4BD9-B204-803492FFF184}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

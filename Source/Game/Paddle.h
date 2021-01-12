@@ -1,5 +1,6 @@
 #pragma once
 #include "ManagerOfManagers.h"
+
 class Paddle : public GameObject {
 private:
 	float speed = 500;
