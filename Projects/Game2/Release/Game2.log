@@ -1,0 +1,16 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+C:\gameEngineRepo\gameEngine\GameTemplate\Source\Game\main.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\gameEngineRepo\gameEngine\GameTemplate\Source\Game\Paddle.h(22,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\gameEngineRepo\gameEngine\GameTemplate\Source\Game\Paddle.h(22,36): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\gameEngineRepo\gameEngine\GameTemplate\Source\Game\Ball.h(64,1): warning C4305: '*=': truncation from 'double' to 'float'
+C:\gameEngineRepo\gameEngine\GameTemplate\Source\Game\main.cpp(33,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\gameEngineRepo\gameEngine\GameTemplate\Source\Game\main.cpp(36,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\gameEngineRepo\gameEngine\GameTemplate\Source\Game\main.cpp(35,72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\gameEngineRepo\gameEngine\GameTemplate\Source\Game\main.cpp(36,161): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+C:\gameEngineRepo\gameEngine\GameTemplate\Source\GameEngine\RenderManager.cpp(135): warning C4715: 'RenderManager::GetSprite': not all control paths return a value
+  All 484 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Game2.vcxproj -> C:\gameEngineRepo\gameEngine\GameTemplate\Projects\Release\Game2.exe
