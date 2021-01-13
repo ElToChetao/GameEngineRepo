@@ -1,6 +1,11 @@
-﻿  Generating code
-  0 of 501 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+﻿  main.cpp
+C:\GameEngine\GameEngineRepo\Source\Game\main.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\GameEngine\GameEngineRepo\Source\Game\Paddle.h(23,46): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngine\GameEngineRepo\Source\Game\Paddle.h(23,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngine\GameEngineRepo\Source\Game\Ball.h(61,1): warning C4305: '*=': truncation from 'double' to 'float'
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+C:\GameEngine\GameEngineRepo\Source\GameEngine\RenderManager.cpp(155): warning C4715: 'RenderManager::GetSprite': not all control paths return a value
+  All 501 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   Game.vcxproj -> C:\GameEngine\GameEngineRepo\Projects\Release\Game.exe

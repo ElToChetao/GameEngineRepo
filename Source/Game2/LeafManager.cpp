@@ -1,9 +1,12 @@
 #include "LeafManager.h"
-
 LeafManager::LeafManager()
 {
 	this->name = "LeafManager";
 	this->points = 0;
+	if (this->saveSytem.SaveExists("Score"))
+	{
+		//this->points = this->saveSytem.Load<int>("Score");
+	}
 	this->leavesOnScreen = 0;
 	this->newLeafCounter = 1.5;
 	this->amountOfLeaves = 5;
