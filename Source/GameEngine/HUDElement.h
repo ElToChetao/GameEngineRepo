@@ -10,12 +10,12 @@ using namespace std;
 
 class HUDElement {
 private:
-	LTexture sprite;
 	string fontPath;
 public:
 	Vector2 position;
 	string content;
 	SDL_Color color;
+	LTexture sprite;
 	int size;
 
 	HUDElement(int x, int y, string text, SDL_Color color = { 0, 0, 0 }, string fontPath = "../../Media/Fonts/pixel.TTF", int size = 28);

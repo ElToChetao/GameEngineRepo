@@ -2,6 +2,12 @@
 
 GameObjectManager::GameObjectManager() {}
 
+GameObjectManager::~GameObjectManager()
+{
+	managers.clear();
+	gameObjects.clear();
+}
+
 vector<GameObject*> GameObjectManager::GetGameObjects() {
 	vector<GameObject*> activeObjects;
 	for (int i = 0; i < gameObjects.size(); i++) {

@@ -33,8 +33,9 @@ class RenderManager :public Singleton<RenderManager>
 		//Screen dimension constants
 		int SCREEN_WIDTH = 640;
 		int SCREEN_HEIGHT = 480;
+
 		vector<LTexture*> sprites;
-		vector <HUDElement*> hud;
+		vector<HUDElement*> hud;
 
 		//Functions
 		bool Init(int w, int h);

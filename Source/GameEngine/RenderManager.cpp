@@ -20,6 +20,17 @@ RenderManager::~RenderManager(void)
   mWindow = NULL;
   mRenderer = NULL;
 
+  for (int i = 0; i < sprites.size(); i++)
+  {
+      sprites[i]->free();
+  }
+  sprites.clear();
+  for (int i = 0; i < hud.size(); i++)
+  {
+      hud[i]->sprite.free();
+  }
+  hud.clear();
+
   //Quit SDL subsystems
   TTF_Quit();
   IMG_Quit();

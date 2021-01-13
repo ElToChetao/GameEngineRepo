@@ -73,7 +73,7 @@ void AudioManager::StopMusic()
 }
 
 AudioManager::~AudioManager()
-{    
+{   
     for (int i = 0; i < sounds.size(); i++)
     {
         Mix_FreeChunk(sounds[i]->sound);

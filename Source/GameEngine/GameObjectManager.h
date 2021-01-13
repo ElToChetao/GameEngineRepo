@@ -15,6 +15,7 @@ private:
 	vector<GameObject*> gameObjects;
 	vector<Manager*> managers;
 	GameObjectManager();
+	~GameObjectManager();
 public:
 	vector<GameObject*> GetGameObjects();
 

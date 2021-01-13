@@ -1,6 +1,6 @@
-﻿  AudioManager.cpp
-C:\GameEngine\GameEngineRepo\Source\GameEngine\AudioManager.cpp(33,28): warning C4244: '=': conversion from 'float' to 'Uint8', possible loss of data
-C:\GameEngine\GameEngineRepo\Source\GameEngine\AudioManager.cpp(40,23): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngine\GameEngineRepo\Source\GameEngine\AudioManager.cpp(77,23): warning C4018: '<': signed/unsigned mismatch
-  ManagerOfManagers.cpp
+﻿  InputManager.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\InputManager.cpp(32,45): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\GameEngine\GameEngineRepo\Source\GameEngine\InputManager.cpp(36,45): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\GameEngine\GameEngineRepo\Source\GameEngine\InputManager.cpp(40,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\GameEngine\GameEngineRepo\Source\GameEngine\InputManager.cpp(44,48): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   GameEngine.vcxproj -> C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.lib

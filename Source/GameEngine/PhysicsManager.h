@@ -11,15 +11,8 @@ class PhysicsManager :public Singleton<PhysicsManager>
 	/*****************************************************************************/
 
 private:
-
-	// Keyboard state
-	const Uint8* mCurrentKeyStates;
-
 	// Private constructor to avoid more than one instance
 	PhysicsManager();
-
-	/*****************************************************************************/
-
 public:
 
 	void Update();
@@ -40,5 +33,4 @@ public:
 	bool CheckRectCircleCollisions(GameObject* rect, Vector2 centerCircle, float radius);
 
 	/*****************************************************************************/
-
 };

@@ -2,6 +2,10 @@
 
 /*****************************************************************************/
 
+InputManager::~InputManager()
+{
+}
+
 void InputManager::Update(void)
 {
   mCurrentKeyStates = SDL_GetKeyboardState(NULL);

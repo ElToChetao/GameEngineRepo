@@ -20,7 +20,7 @@ private:
 
 	// Private constructor to avoid more than one instance
 	InputManager() {};
-
+	~InputManager();
 	/*****************************************************************************/
 
 public:

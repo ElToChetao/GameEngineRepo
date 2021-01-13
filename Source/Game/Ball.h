@@ -22,7 +22,7 @@ public:
 	}
 	void update() override {
 		translate(direction * speed);
-		rotate(180 * direction.x);
+		rotate(speed * direction.x);
 
 		if (transform.position.x < 0) 
 		{
@@ -33,7 +33,6 @@ public:
 			}
 
 			transform.position = startPosition;
-			deviate();
 			direction.x = 1;
 			speed = 200;
 		}
@@ -45,8 +44,6 @@ public:
 				p->updateScore();
 			}
 			transform.position = startPosition;
-
-			deviate();
 			direction.x = -1;
 			speed = 200;
 		}
@@ -55,11 +52,12 @@ public:
 			direction.y *= -1;
 			AudioManager::GetInstance().PlaySound("../../Media/Sounds/1.wav", 20);
 		}
-
-		GameObject* go = PhysicsManager::GetInstance().CheckSphere(getCenterPosition(), collider->radius, this);
-		if (go != NULL) {
-			if (go->tag == "paddle") {
-				direction = go->transform.position.direction(this->transform.position);
+	}
+	void onCollisionEnter(GameObject* other) {
+		if (other != NULL) {
+			if (other->tag == "paddle") {
+				direction = this->transform.position.direction(other->transform.position);
+				direction = direction.normalize();
 				speed *= 1.1;
 			}
 			AudioManager::GetInstance().PlaySound("../../Media/Sounds/1.wav", 20);
