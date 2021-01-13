@@ -1,5 +1,6 @@
-#include "Vector2.h"
+﻿#include "Vector2.h"
 #include <math.h>
+#include <cmath>
 
 const Vector2 Vector2::ZERO = Vector2();
 const Vector2 Vector2::ONE = Vector2(1, 1);
@@ -14,19 +15,24 @@ Vector2::Vector2()
 	y = 0.0;
 }
 
-Vector2::Vector2(float a)
+Vector2::Vector2(double a)
 {
 	this->x = a;
 	this->y = a;
 }
 
-Vector2::Vector2(float x, float y) {
+Vector2::Vector2(double x, double y) {
 	this->x = x;
 	this->y = y;
 }
 
 Vector2 Vector2::direction(Vector2 a) {
 	return Vector2(x - a.x, y - a.y);
+}
+Vector2 Vector2::lerp(Vector2 other, double t) {
+	double lerpedX = (this->x * (1.0 - t)) + (other.x * t);
+	double lerpedY = (this->y * (1.0 - t)) + (other.y * t);
+	return Vector2(lerpedX, lerpedY);
 }
 
 Vector2 Vector2::normalize() {

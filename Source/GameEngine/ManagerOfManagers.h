@@ -16,7 +16,7 @@ public:
 	bool gameRunning;
 	ManagerOfManagers();
 
-	bool Init(void);
+	bool Init(int w, int h);
 
 	void PhysicUpdate();
 	void InputUpdate();

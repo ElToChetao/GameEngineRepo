@@ -8,6 +8,8 @@ class Car :public GameObject
 	public:
 		float currentFuel;
 		float maxFuel;
+		float currentForce;
+		float maxForce;
 
 		Car();
 		void update() override;

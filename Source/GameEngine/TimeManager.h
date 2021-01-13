@@ -8,9 +8,9 @@ class TimeManager :public Singleton<TimeManager>
 	friend class Singleton<TimeManager>;
 
 private:
-	float deltaTime;
-	float timeScale;
-	int currentTime;
+	double deltaTime;
+	double timeScale;
+	double currentTime;
 
 	TimeManager();
 	~TimeManager();
@@ -18,9 +18,9 @@ public:
 	void Init(void);
 	void Update(void);
 
-	float getDeltaTime();
-	float getUnscaledDeltaTime();
+	double getDeltaTime();
+	double getUnscaledDeltaTime();
 	int getCurrentTime();
 
-	void setTimeScale(float scale);
+	void setTimeScale(double scale);
 };

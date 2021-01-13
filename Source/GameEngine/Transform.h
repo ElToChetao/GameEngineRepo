@@ -7,7 +7,7 @@ public:
 	Vector2 size;
 	Vector2 scale;
 
-	float rotation;
+	double rotation;
 
 	Transform();
 };

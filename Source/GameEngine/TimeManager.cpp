@@ -24,11 +24,11 @@ void TimeManager::Update() {
 	currentTime = SDL_GetTicks();
 }
 
-float TimeManager::getDeltaTime()
+double TimeManager::getDeltaTime()
 {
 	return (deltaTime/1000) * timeScale;
 }
-float TimeManager::getUnscaledDeltaTime() {
+double TimeManager::getUnscaledDeltaTime() {
 	return (deltaTime / 1000);
 }
 
@@ -37,7 +37,7 @@ int TimeManager::getCurrentTime()
 	return currentTime;
 }
 
-void TimeManager::setTimeScale(float scale)
+void TimeManager::setTimeScale(double scale)
 {
 	if (scale < 0) {
 		scale = 0;

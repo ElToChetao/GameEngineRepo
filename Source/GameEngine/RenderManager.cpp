@@ -1,6 +1,8 @@
 #include "RenderManager.h"
 #include "GameObjectManager.h"
 #include <SDL_ttf.h>
+
+#include <algorithm>
 /*****************************************************************************/
 
 RenderManager::RenderManager(void)
@@ -14,6 +16,7 @@ RenderManager::~RenderManager(void)
   //Destroy window	
   SDL_DestroyRenderer(mRenderer);
   SDL_DestroyWindow(mWindow);
+
   mWindow = NULL;
   mRenderer = NULL;
 
@@ -24,7 +27,7 @@ RenderManager::~RenderManager(void)
 
 /*****************************************************************************/
 
-bool RenderManager::Init()
+bool RenderManager::Init(int w, int h)
 {
   //Initialization flag
   bool success = true;
@@ -44,6 +47,8 @@ bool RenderManager::Init()
     }
 
     //Create window
+    SCREEN_WIDTH = w;
+    SCREEN_HEIGHT = h;
     mWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     if (mWindow == NULL)
     {
@@ -62,7 +67,7 @@ bool RenderManager::Init()
       else
       {
         //Initialize renderer color
-        SDL_SetRenderDrawColor(mRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+        SDL_SetRenderDrawColor(mRenderer, 42, 212, 83, 0xFF);
 
         //Initialize PNG loading
         int imgFlags = IMG_INIT_PNG;
@@ -97,11 +102,15 @@ void RenderManager::Update()
 
     //get al rendereable objets form gameobjectmanager
     vector<GameObject*> go = GameObjectManager::GetInstance().GetGameObjects();
-    for (int i = 0; i < go.size(); i++) {
-        if (go[i]->texture != NULL) {
-            go[i]->texture->render(go[i]->transform.position.x, go[i]->transform.position.y, NULL, go[i]->transform.rotation);
+
+    for (int layer = 1; layer <= 3; layer++) {
+        for (int i = 0; i < go.size(); i++) {
+            if (go[i]->texture != NULL && go[i]->texture->getLayer() == layer) {
+                go[i]->texture->render(go[i]->transform.position.x, go[i]->transform.position.y, NULL, go[i]->transform.rotation);
+            }
         }
     }
+    go.clear();
 
     for (int i = 0; i < hud.size(); i++) {
         hud[i]->RenderText();
@@ -109,9 +118,10 @@ void RenderManager::Update()
     //render screen
     SDL_RenderPresent(GetRenderer());
 }
-LTexture* RenderManager::GetSprite(string spritePath)
+LTexture* RenderManager::GetSprite(string spritePath, int layer)
 {
     // check if sprite is already loaded
+
     for (int i = 0; i < sprites.size(); i++) {
         if (sprites[i]->spritePath._Equal(spritePath)) {
             // sprite already loaded
@@ -127,10 +137,9 @@ LTexture* RenderManager::GetSprite(string spritePath)
     }
     else 
     {
-        int index = sprites.size();
+        tempSprite->setLayer(layer);
         sprites.push_back(tempSprite);
-        printf("\nSprite loaded succesfully\n");
-        return sprites[index];
+        return sprites[sprites.size() - 1];
     }
 }
 

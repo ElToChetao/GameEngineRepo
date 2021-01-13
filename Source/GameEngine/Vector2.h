@@ -9,20 +9,21 @@ public:
 	static const Vector2 LEFT;
 	static const Vector2 UP;
 
-	float x;
-	float y;
+	double x;
+	double y;
 
 	Vector2();
-	Vector2(float x, float y);
-	Vector2(float a);
+	Vector2(double x, double y);
+	Vector2(double a);
 
 	Vector2 direction(Vector2 a);
 	Vector2 normalize();
+	Vector2 lerp(Vector2 other, double t);
 	double distance(Vector2 a, Vector2 b);
 
 	Vector2& operator+=(const Vector2& other);
 	Vector2& operator-=(const Vector2& other);
-	const Vector2 operator * (float v) const { return Vector2(x * v, y * v); }
+	const Vector2 operator * (double v) const { return Vector2(x * v, y * v); }
 	Vector2& operator=(const Vector2& other);
 	Vector2& operator-();
 };

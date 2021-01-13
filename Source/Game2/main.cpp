@@ -12,15 +12,18 @@ int main( int argc, char* args[] )
 	ManagerOfManagers::CreateSingleton();
 
 	//Start up SDL and create window
-	if(!ManagerOfManagers::GetInstance().Init())
+	if(!ManagerOfManagers::GetInstance().Init(1280, 720))
 	{
 		printf( "Failed to initialize!\n" );
 	}
 	else
 	{
+		RenderManager::GetInstance().HideCursor();
 		// GameObject instances
 		Car car;
 		LeafManager leafManager;
+
+		AudioManager::GetInstance().PlaySound("../../Media/Sounds/music.wav", 20);
 
 		//While application is running
 		while( ManagerOfManagers::GetInstance().gameRunning)

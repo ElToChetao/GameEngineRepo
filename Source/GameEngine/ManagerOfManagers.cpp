@@ -4,7 +4,7 @@ ManagerOfManagers::ManagerOfManagers() {
 	gameRunning = true;
 }
 
-bool ManagerOfManagers::Init(void) {
+bool ManagerOfManagers::Init(int w, int h) {
 	// init all managers
 	TimeManager::CreateSingleton();
 	InputManager::CreateSingleton();
@@ -16,7 +16,7 @@ bool ManagerOfManagers::Init(void) {
 	GameObjectManager::GetInstance().Init();
 	AudioManager::GetInstance().Init();
 
-	if (!RenderManager::GetInstance().Init())
+	if (!RenderManager::GetInstance().Init(w, h))
 	{
 		return false;
 	}

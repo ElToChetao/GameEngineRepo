@@ -12,7 +12,7 @@ class LeafManager : public Manager
 		float newLeafCounter;
 		float currentLeafCounter;
 		
-		HUDElement score = HUDElement(5, 5, "0");
+		HUDElement score = HUDElement(RenderManager::GetInstance().SCREEN_WIDTH * 0.5, 10, "0");
 	public:
 		LeafManager();
 		void update() override;

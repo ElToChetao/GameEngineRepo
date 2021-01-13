@@ -11,7 +11,7 @@ GameObject::GameObject(string tag) {
 	GameObjectManager::GetInstance().AddGameObject(this);
 }
 
-void GameObject::addCollider(float radius) {
+void GameObject::addCollider(double radius) {
 	if (radius < 0)
 	{
 		collider = new Collider();
@@ -29,15 +29,15 @@ Vector2 GameObject::getCenterPosition()
 	return Vector2(transform.position.x + transform.size.x / 2, transform.position.y + transform.size.y / 2);
 }
 
-void GameObject::addSprite(string spritePath) {
-	texture = RenderManager::GetInstance().GetSprite(spritePath);
+void GameObject::addSprite(string spritePath, int layer) {
+	texture = RenderManager::GetInstance().GetSprite(spritePath, layer);
 }
 
 void GameObject::translate(Vector2 offset) {
 	transform.position += offset * TimeManager::GetInstance().getDeltaTime();
 }
 
-void GameObject::rotate(float degree)
+void GameObject::rotate(double degree)
 {
 	transform.rotation += degree * TimeManager::GetInstance().getDeltaTime();
 }

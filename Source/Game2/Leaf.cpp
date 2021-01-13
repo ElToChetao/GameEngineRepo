@@ -7,18 +7,19 @@ Leaf::Leaf(Vector2 position):GameObject()
 
 	transform.position = position;
 	
+	transform.rotation = rand() % 360;
 	int option = rand()%3;
 
 	switch (option)
 	{
 		case 0:
-			addSprite("../../Media/Sprites/CarLeaf/leaves0.png");
+			addSprite("../../Media/Sprites/CarLeaf/leaves0.png", 2);
 			break;
 		case 1:
-			addSprite("../../Media/Sprites/CarLeaf/leaves1.png");
+			addSprite("../../Media/Sprites/CarLeaf/leaves1.png", 2);
 			break;
 		case 2:
-			addSprite("../../Media/Sprites/CarLeaf/leaves2.png");
+			addSprite("../../Media/Sprites/CarLeaf/leaves2.png", 2);
 			break;
 	}
 	
@@ -38,6 +39,7 @@ void Leaf::update()
 		{
 			p->addPoint();
 		}
+		AudioManager::GetInstance().PlaySound("../../Media/Sounds/leaf.wav");
 		destroy(this);
 	}
 }
@@ -49,7 +51,7 @@ void Leaf::leafMovement(float dt)
 	currentSpeed *= 0.98;
 }
 
-void Leaf::addForce(Vector2 direction, int magnitude)
+void Leaf::addForce(Vector2 direction, float magnitude)
 {
 	this->direction = -direction;
 	this->currentSpeed = magnitude;

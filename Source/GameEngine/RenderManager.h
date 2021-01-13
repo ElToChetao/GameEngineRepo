@@ -31,17 +31,17 @@ class RenderManager :public Singleton<RenderManager>
 
 	public:
 		//Screen dimension constants
-		static const int SCREEN_WIDTH = 640;
-		static const int SCREEN_HEIGHT = 480;
-		vector <LTexture*> sprites;
+		int SCREEN_WIDTH = 640;
+		int SCREEN_HEIGHT = 480;
+		vector<LTexture*> sprites;
 		vector <HUDElement*> hud;
 
 		//Functions
-		bool Init();
+		bool Init(int w, int h);
 
 		void Update();
 
-		LTexture* GetSprite(string spritePath);
+		LTexture* GetSprite(string spritePath, int layer);
 
 		void AddHUDElement(HUDElement* hudElement);
 
@@ -49,7 +49,10 @@ class RenderManager :public Singleton<RenderManager>
 
 		SDL_Renderer* GetRenderer() { return mRenderer; }
 
-		Vector2 GetScreenAdaptedPosition(float x, float y) { return Vector2(SCREEN_WIDTH * x, SCREEN_HEIGHT * y); }
+		void HideCursor() { SDL_ShowCursor(0); }
+		void ShowCursor() { SDL_ShowCursor(1); }
+
+		Vector2 GetScreenAdaptedPosition(double x, double y) { return Vector2(SCREEN_WIDTH * x, SCREEN_HEIGHT * y); }
 
 		/*****************************************************************************/
 };

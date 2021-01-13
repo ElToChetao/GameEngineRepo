@@ -15,6 +15,7 @@ private:
 	//Image dimensions
 	int mWidth;
 	int mHeight;
+	int layer;
 
 public:
   //Initializes variables
@@ -22,6 +23,9 @@ public:
 
   //Deallocates memory
   ~LTexture();
+
+  void setLayer(int);
+  int getLayer() { return layer; }
 
   //Loads image at specified path
   bool loadFromFile(std::string path);

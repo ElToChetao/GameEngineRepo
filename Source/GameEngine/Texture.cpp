@@ -17,6 +17,12 @@ LTexture::~LTexture()
   free();
 }
 
+void LTexture::setLayer(int i)
+{
+    i = i < 1 ? 1 : i > 3 ? 3 : i;
+    layer = i;
+}
+
 bool LTexture::loadFromFile(string path)
 {
   //Get rid of preexisting texture

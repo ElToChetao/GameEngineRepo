@@ -22,7 +22,7 @@ int main( int argc, char* args[] )
 	ManagerOfManagers::CreateSingleton();
 
 	//Start up SDL and create window
-	if(!ManagerOfManagers::GetInstance().Init())
+	if(!ManagerOfManagers::GetInstance().Init(800, 600))
 	{
 		printf( "Failed to initialize!\n" );
 	}

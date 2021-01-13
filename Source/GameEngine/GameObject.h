@@ -25,11 +25,11 @@ public:
 	GameObject(string tag);
 
 	void translate(Vector2 offset);
-	void rotate(float degree);
+	void rotate(double degree);
 	void destroy(GameObject* other);
 
-	void addCollider(float radius = -1);
-	void addSprite(string spritePath);
+	void addCollider(double radius = -1);
+	void addSprite(string spritePath, int layer = 3);
 
 	void setActive(bool b) { isActive = b; }
 	void setTag(string tag) { this->tag = tag; }
