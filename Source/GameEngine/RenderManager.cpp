@@ -78,7 +78,7 @@ bool RenderManager::Init(int w, int h)
       else
       {
         //Initialize renderer color
-        SDL_SetRenderDrawColor(mRenderer, 42, 212, 83, 0xFF);
+        SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, 0xFF);
 
         //Initialize PNG loading
         int imgFlags = IMG_INIT_PNG;

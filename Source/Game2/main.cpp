@@ -24,6 +24,7 @@ int main( int argc, char* args[] )
 		LeafManager leafManager;
 
 		AudioManager::GetInstance().PlaySound("../../Media/Sounds/music.wav", 20);
+		RenderManager::GetInstance().SetBackgroundColor(42, 212, 83);
 
 		//While application is running
 		while( ManagerOfManagers::GetInstance().gameRunning)

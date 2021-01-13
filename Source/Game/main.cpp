@@ -38,6 +38,8 @@ int main( int argc, char* args[] )
 
 		Ball ball;
 
+		RenderManager::GetInstance().SetBackgroundColor(133, 133, 133);
+
 		//While application is running
 		while( ManagerOfManagers::GetInstance().gameRunning )
 		{

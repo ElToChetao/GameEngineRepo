@@ -53,6 +53,8 @@ class RenderManager :public Singleton<RenderManager>
 		void HideCursor() { SDL_ShowCursor(0); }
 		void ShowCursor() { SDL_ShowCursor(1); }
 
+		void SetBackgroundColor(int r, int g, int b, int a = 255) { SDL_SetRenderDrawColor(mRenderer, r, g, b, a); }
+
 		Vector2 GetScreenAdaptedPosition(double x, double y) { return Vector2(SCREEN_WIDTH * x, SCREEN_HEIGHT * y); }
 
 		/*****************************************************************************/
