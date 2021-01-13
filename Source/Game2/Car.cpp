@@ -16,17 +16,25 @@ Car::Car():GameObject()
 
 void Car::update()
 {
-	updatePosition();
+	float dt = TimeManager::GetInstance().getDeltaTime();
+	updatePosition(dt);
+
+	currentFuel -= dt/100;
+	fuel.UpdateContent(to_string((int) (currentFuel * 100)) + " %");
+	if (currentFuel <= 0)
+	{
+		printf("Sin gasolina");
+	}
 }
 
-void Car::updatePosition()
+void Car::updatePosition(float dt)
 {
 	Vector2 oldPosition = transform.position;
 
 	Vector2 targetPostion = InputManager::GetInstance().GetMousePosition();
 	targetPostion.x -= (transform.size.x / 2);
 	targetPostion.y -= (transform.size.y / 2);
-	transform.position = transform.position.lerp(targetPostion, TimeManager::GetInstance().getDeltaTime() * 10);
+	transform.position = transform.position.lerp(targetPostion, dt * 10);
 
 	Vector2 direction = oldPosition.direction(targetPostion);
 	currentForce = sqrt(direction.x * direction.x + direction.y * direction.y);
@@ -45,9 +53,13 @@ void Car::onCollisionEnter(GameObject* obj)
 		Vector2 direction = transform.position.direction(p->transform.position);
 		p->addForce(direction.normalize(), currentForce * maxForce);
 	}
-	//Fuel
-	/*else if (Leaf* p = dynamic_cast<Leaf*>(obj))
+	else if (Fuel * p = dynamic_cast<Fuel*>(obj))
 	{
-		currentFuel++
-	}*/
+		currentFuel += 0.3;
+		if (currentFuel > 1)
+		{
+			currentFuel = 1;
+		}
+		destroy(p);
+	}
 }

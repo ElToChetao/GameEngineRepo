@@ -20,12 +20,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Game2\Car.cpp" />
+    <ClCompile Include="..\..\Source\Game2\Fuel.cpp" />
     <ClCompile Include="..\..\Source\Game2\Leaf.cpp" />
     <ClCompile Include="..\..\Source\Game2\LeafManager.cpp" />
     <ClCompile Include="..\..\Source\Game2\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\Game2\Car.h" />
+    <ClInclude Include="..\..\Source\Game2\Fuel.h" />
     <ClInclude Include="..\..\Source\Game2\Leaf.h" />
     <ClInclude Include="..\..\Source\Game2\LeafManager.h" />
   </ItemGroup>

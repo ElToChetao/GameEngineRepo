@@ -1,11 +1,18 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Leaf.cpp
-C:\GameEngine\GameEngineRepo\Source\Game2\LeafManager.h(17,75): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\GameEngine\GameEngineRepo\Source\Game2\Leaf.cpp(33,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\GameEngine\GameEngineRepo\Source\Game2\Leaf.cpp(53,22): warning C4305: '*=': truncation from 'double' to 'float'
-  Generating code
-  1 of 643 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: El directorio intermedio (Release\) contiene archivos compartidos de otro proyecto (Game.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  Car.cpp
+D:\Git\GameEngineRepo\Source\Game2\LeafManager.h(21,75): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\Game2\Car.h(10,124): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\Game2\Car.h(10,74): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\Game2\Car.cpp(19,11): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\Game2\Car.cpp(40,21): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\Game2\Car.cpp(58,21): warning C4305: '+=': truncamiento de 'double' a 'float'
+  main.cpp
+D:\Git\GameEngineRepo\Source\Game2\LeafManager.h(21,75): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\Game2\Car.h(10,124): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\Game2\Car.h(10,74): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+  Generando código
+  4 of 657 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Game2.vcxproj -> C:\GameEngine\GameEngineRepo\Projects\Release\Game2.exe
+    9 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  Game2.vcxproj -> D:\Git\GameEngineRepo\Projects\Release\Game2.exe

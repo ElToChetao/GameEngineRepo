@@ -29,6 +29,7 @@ Vector2::Vector2(double x, double y) {
 Vector2 Vector2::direction(Vector2 a) {
 	return Vector2(x - a.x, y - a.y);
 }
+
 Vector2 Vector2::lerp(Vector2 other, double t) {
 	double lerpedX = (this->x * (1.0 - t)) + (other.x * t);
 	double lerpedY = (this->y * (1.0 - t)) + (other.y * t);
