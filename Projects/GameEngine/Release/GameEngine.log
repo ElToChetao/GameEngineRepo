@@ -1,9 +1,3 @@
-﻿  RenderManager.cpp
-C:\GameEngine\GameEngineRepo\Source\GameEngine\RenderManager.cpp(23,21): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngine\GameEngineRepo\Source\GameEngine\RenderManager.cpp(28,21): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngine\GameEngineRepo\Source\GameEngine\RenderManager.cpp(118,27): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngine\GameEngineRepo\Source\GameEngine\RenderManager.cpp(120,94): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\GameEngine\GameEngineRepo\Source\GameEngine\RenderManager.cpp(120,65): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\GameEngine\GameEngineRepo\Source\GameEngine\RenderManager.cpp(126,23): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngine\GameEngineRepo\Source\GameEngine\RenderManager.cpp(136,23): warning C4018: '<': signed/unsigned mismatch
+﻿  Transform.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\Transform.cpp(13,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   GameEngine.vcxproj -> C:\GameEngine\GameEngineRepo\Projects\Release\GameEngine.lib

@@ -37,7 +37,9 @@ public:
 	template <typename T>
 	T* getComponent();
 
-	virtual void update() {};
+	virtual void update() {
+		transform.UpdatePhysics();
+	};
 	virtual void onDestroy() {};
 	virtual void onCollisionStay(GameObject *other) {};
 	virtual void onCollisionEnter(GameObject* other) {};

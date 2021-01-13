@@ -24,12 +24,14 @@ Leaf::Leaf(Vector2 position):GameObject()
 	}
 	
 	addCollider(32);
+	transform.SetFrictionValue(0.97);
 }
 
 void Leaf::update()
 {
+	GameObject::update();
 	float dt = TimeManager::GetInstance().getDeltaTime();
-	leafMovement(dt);
+	//leafMovement(dt);
 
 	if(transform.position.x < 0 || transform.position.x > RenderManager::GetInstance().SCREEN_WIDTH
 	|| transform.position.y < 0 || transform.position.y > RenderManager::GetInstance().SCREEN_HEIGHT)
@@ -53,6 +55,5 @@ void Leaf::leafMovement(float dt)
 
 void Leaf::addForce(Vector2 direction, float magnitude)
 {
-	this->direction = -direction;
-	this->currentSpeed = magnitude;
+	transform.AddForce(-direction * magnitude);
 }

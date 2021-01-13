@@ -23,6 +23,8 @@ public:
 
 	Vector2& operator+=(const Vector2& other);
 	Vector2& operator-=(const Vector2& other);
+	Vector2& operator*=(const Vector2& other);
+	Vector2& operator*=(const double& value);
 	const Vector2 operator * (double v) const { return Vector2(x * v, y * v); }
 	Vector2& operator=(const Vector2& other);
 	Vector2& operator-();
