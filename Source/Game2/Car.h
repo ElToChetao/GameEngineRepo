@@ -1,13 +1,14 @@
 #include "ManagerOfManagers.h"
 #include "Leaf.h"
 #include "Fuel.h"
+#include "Text.h"
 
 using namespace std;
 
 class Car :public GameObject
 {
 	public:
-		HUDElement fuel = HUDElement(RenderManager::GetInstance().SCREEN_WIDTH * 0.5, RenderManager::GetInstance().SCREEN_HEIGHT * 0.95, "100 %");
+		Text fuel = Text(Vector2(RenderManager::GetInstance().GetScreenAdaptedPosition(0.5, 0.95)), "100 %", {255, 0, 0});
 		float currentFuel;
 		float maxFuel;
 		float currentForce;

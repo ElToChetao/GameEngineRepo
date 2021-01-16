@@ -3,9 +3,10 @@ LeafManager::LeafManager()
 {
 	this->name = "LeafManager";
 	this->points = 0;
-	if (this->saveSytem.SaveExists("Score"))
+	if (SaveSystem::SaveExists("asdasdasdsad"))
 	{
-		//this->points = this->saveSytem.Load<int>("Score");
+		printf("asdasd");
+		//SaveSystem::Save(3, "fornite");
 	}
 
 	this->leavesOnScreen = 0;

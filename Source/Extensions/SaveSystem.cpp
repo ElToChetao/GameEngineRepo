@@ -47,7 +47,7 @@ std::string SaveSystem::GetValue(std::string key) {
 }
 
 template <typename T>
-T SaveSystem::Load(std::string key)
+static T SaveSystem::Load(std::string key)
 {
     if (KeyExists(key)) {
         std::string data = GetValue(key);
@@ -73,7 +73,7 @@ T SaveSystem::Load(std::string key)
 }
 
 template <typename T>
-void SaveSystem::Save(T data, std::string key)
+static void SaveSystem::Save(T data, std::string key)
 {
     if (!KeyExists(key)) {
         std::ofstream file;

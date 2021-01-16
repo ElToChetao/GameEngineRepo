@@ -1,24 +1,16 @@
 #pragma once
-
-#include "SDL.h"
-#include "SDL_image.h"
-#include "Transform.h"
 #include <Texture.h>
-
 #include <string>
+#include "Vector2.h"
+
 using namespace std;
 
 class HUDElement {
 private:
-	string fontPath;
+	
 public:
+	HUDElement(Vector2 position) { this->position = position; };
 	Vector2 position;
-	string content;
-	SDL_Color color;
 	LTexture sprite;
-	int size;
-
-	HUDElement(int x, int y, string text, SDL_Color color = { 0, 0, 0 }, string fontPath = "../../Media/Fonts/pixel.TTF", int size = 28);
-	void RenderText();
-	void UpdateContent(string content);
+	virtual void renderHUD() {};
 };

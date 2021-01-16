@@ -16,42 +16,33 @@ public:
 		startPosition = RenderManager::GetInstance().GetScreenAdaptedPosition(0.5, 0.5);
 		transform.position = startPosition;
 	}
-	void deviate() {
-		float y = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-		direction.y = y;
-	}
 	void update() override {
 		translate(direction * speed);
 		rotate(speed * direction.x);
 
 		if (transform.position.x < 0) 
 		{
-			GameObject* paddle = GameObjectManager::GetInstance().Find("rightPaddle");
-			if (Paddle* p = dynamic_cast<Paddle*>(paddle))
-			{
-				p->updateScore();
-			}
-
-			transform.position = startPosition;
-			direction.x = 1;
-			speed = 200;
+			score("rightPaddle", 1);
 		}
 		else if(transform.position.x > RenderManager::GetInstance().SCREEN_WIDTH - transform.size.x)
 		{
-			GameObject* paddle = GameObjectManager::GetInstance().Find("leftPaddle");
-			if (Paddle* p = dynamic_cast<Paddle*>(paddle))
-			{
-				p->updateScore();
-			}
-			transform.position = startPosition;
-			direction.x = -1;
-			speed = 200;
+			score("leftPaddle", -1);
 		}
 
 		if (transform.position.y < 0 || transform.position.y > RenderManager::GetInstance().SCREEN_HEIGHT - transform.size.y) {
 			direction.y *= -1;
 			AudioManager::GetInstance().PlaySound("../../Media/Sounds/1.wav", 20);
 		}
+	}
+	void score(string tag, int dirX) {
+		GameObject* paddle = GameObjectManager::GetInstance().Find(tag);
+		if (Paddle* p = dynamic_cast<Paddle*>(paddle))
+		{
+			p->updateScore();
+		}
+		transform.position = startPosition;
+		direction = Vector2(dirX, 0);
+		speed = 200;
 	}
 	void onCollisionEnter(GameObject* other) {
 		if (other != NULL) {

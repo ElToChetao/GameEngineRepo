@@ -3,6 +3,7 @@
 #include "Leaf.h"
 #include "Fuel.h"
 #include "SaveSystem.h"
+#include "Text.h"
 
 using namespace std;
 
@@ -25,7 +26,7 @@ class LeafManager : public Manager
 		int timefuelSpwnLvl;
 		*/
 
-		HUDElement score = HUDElement(RenderManager::GetInstance().SCREEN_WIDTH * 0.5, 10, "0");
+		Text score = Text(Vector2(RenderManager::GetInstance().SCREEN_WIDTH * 0.5, 10), "0");
 
 	public:
 		LeafManager();
