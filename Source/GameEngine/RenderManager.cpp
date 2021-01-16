@@ -124,7 +124,9 @@ void RenderManager::Update()
     go.clear();
 
     for (int i = 0; i < hud.size(); i++) {
-        hud[i]->renderHUD();
+        if (hud[i]->isActive) {
+            hud[i]->renderHUD();
+        }
     }
     //render screen
     SDL_RenderPresent(GetRenderer());

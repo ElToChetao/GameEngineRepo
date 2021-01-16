@@ -4,6 +4,7 @@
 #include "Fuel.h"
 #include "SaveSystem.h"
 #include "Text.h"
+#include "Button.h"
 
 using namespace std;
 
@@ -18,7 +19,10 @@ class LeafManager : public Manager
 		float currentLeafCounter;
 		float fuelCounter;
 		float currentFuelCounter;
-		SaveSystem saveSytem;
+
+		Button* button = new Button(Vector2(100, 100));
+
+		bool gameStarted = false;
 
 		/*Lvl
 		int leafLvl;

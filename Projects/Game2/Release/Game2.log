@@ -1,14 +1,14 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Car.cpp
+  LeafManager.cpp
 C:\GameEngineRepo\Source\Extensions\SaveSystem.h(15,3): warning C4091: 'static ': ignored on left of 'SaveSystem' when no variable is declared
-C:\GameEngineRepo\Source\Game2\Car.cpp(19,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\GameEngineRepo\Source\Game2\Car.cpp(40,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\GameEngineRepo\Source\Game2\Car.cpp(58,21): warning C4305: '+=': truncation from 'double' to 'float'
-  main.cpp
-C:\GameEngineRepo\Source\Extensions\SaveSystem.h(15,3): warning C4091: 'static ': ignored on left of 'SaveSystem' when no variable is declared
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(26,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(51,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(52,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(61,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(62,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   Generating code
-  1 of 661 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+  1 of 579 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Game2.vcxproj -> C:\GameEngineRepo\Projects\Release\Game2.exe

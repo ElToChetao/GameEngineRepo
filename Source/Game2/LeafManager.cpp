@@ -3,43 +3,48 @@ LeafManager::LeafManager()
 {
 	this->name = "LeafManager";
 	this->points = 0;
-	if (SaveSystem::SaveExists("asdasdasdsad"))
-	{
-		printf("asdasd");
-		//SaveSystem::Save(3, "fornite");
-	}
-
 	this->leavesOnScreen = 0;
 	this->newLeafCounter = 3;
 	this->amountOfLeaves = 5;
 	this->currentLeafCounter = 0;
 	this->fuelCounter = 7;
 	this->currentFuelCounter = 0;
+
+	button->addText("PLAY");
 }
 
 void LeafManager::update()
 {
-	float dt = TimeManager::GetInstance().getDeltaTime();
-	currentLeafCounter += dt;
-	currentFuelCounter += dt;
-
-	if (currentLeafCounter >= newLeafCounter)
+	//if (InputManager::GetInstance().GetKey())
+	if (button != NULL && button->MouseOverButton())
 	{
-		for (int i = 0; i < amountOfLeaves; i++)
+		gameStarted = true;
+		delete button;
+	}
+
+	if (gameStarted) 
+	{
+		float dt = TimeManager::GetInstance().getDeltaTime();
+		currentLeafCounter += dt;
+		currentFuelCounter += dt;
+
+		if (currentLeafCounter >= newLeafCounter)
 		{
-			newLeaf();
+			for (int i = 0; i < amountOfLeaves; i++)
+			{
+				newLeaf();
+			}
+
+			amountOfLeaves = rand() % 10 + 5;
+
+			currentLeafCounter = 0;
 		}
-
-		amountOfLeaves = rand()%10 + 5;
-
-		currentLeafCounter = 0;
+		if (currentFuelCounter >= fuelCounter)
+		{
+			newFuel();
+			currentFuelCounter = 0;
+		}
 	}
-	if (currentFuelCounter >= fuelCounter)
-	{
-		newFuel();
-		currentFuelCounter = 0;
-	}
-
 }
 
 void LeafManager::newFuel()

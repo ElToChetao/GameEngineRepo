@@ -5,6 +5,7 @@
 #include "Car.h"
 #include "Leaf.h"
 #include "LeafManager.h"
+#include "Button.h"
 //#incldue "PowerUp.h"
 
 int main( int argc, char* args[] )
@@ -26,6 +27,7 @@ int main( int argc, char* args[] )
 		AudioManager::GetInstance().PlaySound("../../Media/Sounds/music.wav", 20);
 		RenderManager::GetInstance().SetBackgroundColor(42, 212, 83);
 
+		
 		//While application is running
 		while( ManagerOfManagers::GetInstance().gameRunning)
 		{
