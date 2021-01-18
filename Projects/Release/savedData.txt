@@ -1,1 +1,2 @@
 numero:10
+Score:5

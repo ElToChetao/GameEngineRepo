@@ -1,2 +1,6 @@
-﻿  SceneManager.cpp
-  GameEngine.vcxproj -> C:\GameEngineRepo\Projects\Release\GameEngine.lib
+﻿  InputManager.cpp
+D:\Git\GameEngineRepo\Source\GameEngine\InputManager.cpp(41,45): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\GameEngine\InputManager.cpp(45,45): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\GameEngine\InputManager.cpp(49,49): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\GameEngine\InputManager.cpp(53,48): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  GameEngine.vcxproj -> D:\Git\GameEngineRepo\Projects\Release\GameEngine.lib

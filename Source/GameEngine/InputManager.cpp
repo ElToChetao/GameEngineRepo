@@ -9,7 +9,8 @@ InputManager::~InputManager()
 void InputManager::Update(void)
 {
   mCurrentKeyStates = SDL_GetKeyboardState(NULL);
-  SDL_GetMouseState(&mouseX, &mouseY);
+  
+   SDL_GetMouseState(&mouseX, &mouseY);
 }
 /*****************************************************************************/
 
@@ -22,7 +23,15 @@ bool InputManager::GetKey(int scanCode)
   return mCurrentKeyStates[scanCode] != 0;
 }
 
-/*****************************************************************************/
+bool InputManager::GetMouseButton(int index)
+{
+	if (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(index)) {
+		return true;
+	}
+	return false;
+}
+
+/*******************************************************************************************/
 
 float InputManager::GetAxis(string axis)
 {

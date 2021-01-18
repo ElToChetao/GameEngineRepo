@@ -12,6 +12,7 @@ class LeafManager : public Manager
 {
 	private:
 		int points;
+		int highScore;
 		int leavesOnScreen;
 		int amountOfLeaves;
 
@@ -24,16 +25,13 @@ class LeafManager : public Manager
 
 		bool gameStarted = false;
 
-		/*Lvl
-		int leafLvl;
-		int timeLeafSpwnLvl;
-		int timefuelSpwnLvl;
-		*/
-
 		Text score = Text(Vector2(RenderManager::GetInstance().SCREEN_WIDTH * 0.5, 10), "0");
+		Text highScoreText = Text(Vector2(RenderManager::GetInstance().SCREEN_WIDTH * 0.8, 10), "HIGHSCORE: 0");
 
 	public:
 		LeafManager();
+		~LeafManager();
+		
 		void update() override;
 
 		void newLeaf();

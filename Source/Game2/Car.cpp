@@ -19,10 +19,12 @@ void Car::update()
 	float dt = TimeManager::GetInstance().getDeltaTime();
 	updatePosition(dt);
 
-	currentFuel -= dt/100;
+	currentFuel -= dt/50;
 	fuel.UpdateContent(to_string((int) (currentFuel * 100)) + " %");
+
 	if (currentFuel <= 0)
 	{
+		// al menu
 		printf("Sin gasolina");
 	}
 }
@@ -55,7 +57,7 @@ void Car::onCollisionEnter(GameObject* obj)
 	}
 	else if (Fuel * p = dynamic_cast<Fuel*>(obj))
 	{
-		currentFuel += 0.3;
+		currentFuel += 0.2;
 		if (currentFuel > 1)
 		{
 			currentFuel = 1;

@@ -26,11 +26,13 @@ private:
 public:
 	int mouseX;
 	int mouseY;
+
 	void Update( void );
 
 	bool GetKey( int scanCode );
 
 	Vector2 GetMousePosition();
+	bool GetMouseButton(int index);
 
 	float GetAxis(string axis);
 
