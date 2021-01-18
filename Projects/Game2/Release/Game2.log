@@ -1,4 +1,22 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Car.cpp
+C:\GameEngineRepo\Source\Game2\Car.cpp(19,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\Car.cpp(40,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\Car.cpp(58,21): warning C4305: '+=': truncation from 'double' to 'float'
+  Leaf.cpp
+C:\GameEngineRepo\Source\Game2\Leaf.cpp(33,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\Leaf.cpp(53,22): warning C4305: '*=': truncation from 'double' to 'float'
+  LeafManager.cpp
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(27,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(52,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(53,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(62,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(63,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   main.cpp
-main.obj : error LNK2001: unresolved external symbol "public: static void __cdecl SaveSystem::Save<int>(int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??$Save@H@SaveSystem@@SAXHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-C:\GameEngineRepo\Projects\Release\Game2.exe : fatal error LNK1120: 1 unresolved externals
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+C:\GameEngineRepo\Source\Extensions\SaveSystem.cpp(21): warning C4715: 'SaveSystem::KeyExists': not all control paths return a value
+C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(157): warning C4715: 'RenderManager::GetSprite': not all control paths return a value
+  All 690 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Game2.vcxproj -> C:\GameEngineRepo\Projects\Release\Game2.exe

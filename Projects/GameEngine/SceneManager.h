@@ -7,7 +7,7 @@ class SceneManager :public Singleton<SceneManager>
 public:
 	SceneManager();
 
-	bool Init(int w, int h);
+	void Init();
 	void Update(void);
 
 	void Destroy(void);

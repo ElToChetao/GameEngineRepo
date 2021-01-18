@@ -2,11 +2,12 @@
 
 SceneManager::SceneManager()
 {
+
 }
 
-bool SceneManager::Init(int w, int h)
+void SceneManager::Init()
 {
-	return false;
+
 }
 
 void SceneManager::Update(void)
