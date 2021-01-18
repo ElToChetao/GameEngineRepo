@@ -6,13 +6,15 @@
 #include "Leaf.h"
 #include "LeafManager.h"
 #include "Button.h"
+#include "SaveSystem.h"
 //#incldue "PowerUp.h"
+#include <iostream>
 
 int main( int argc, char* args[] )
 {
 	ManagerOfManagers::CreateSingleton();
 
-	//Start up SDL and create window
+	// Start up SDL and create window
 	if(!ManagerOfManagers::GetInstance().Init(1280, 720))
 	{
 		printf( "Failed to initialize!\n" );
@@ -27,11 +29,16 @@ int main( int argc, char* args[] )
 		AudioManager::GetInstance().PlaySound("../../Media/Sounds/music.wav", 20);
 		RenderManager::GetInstance().SetBackgroundColor(42, 212, 83);
 
+		string s = "numero";
+		int num = 10;
+		SaveSystem::Save<int>(num, s);
+		bool b = SaveSystem::SaveExists("hola");
+		cout << b;
 		
-		//While application is running
+		// While application is running
 		while( ManagerOfManagers::GetInstance().gameRunning)
 		{
-			// update all managers and scripts
+			// Update all managers and scripts
 			ManagerOfManagers::GetInstance().Update();
 		}
 	}

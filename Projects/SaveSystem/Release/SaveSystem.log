@@ -1,3 +1,2 @@
 ﻿  SaveSystem.cpp
-C:\GameEngineRepo\Source\Extensions\SaveSystem.h(15,3): warning C4091: 'static ': ignored on left of 'SaveSystem' when no variable is declared
   SaveSystem.vcxproj -> C:\GameEngineRepo\Projects\Release\SaveSystem.lib

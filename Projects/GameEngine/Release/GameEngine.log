@@ -1,4 +1,73 @@
-﻿  Button.cpp
+﻿  Audio.cpp
+  AudioManager.cpp
+C:\GameEngineRepo\Source\GameEngine\AudioManager.cpp(33,28): warning C4244: '=': conversion from 'float' to 'Uint8', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\AudioManager.cpp(40,23): warning C4018: '<': signed/unsigned mismatch
+C:\GameEngineRepo\Source\GameEngine\AudioManager.cpp(77,23): warning C4018: '<': signed/unsigned mismatch
+  Button.cpp
 C:\GameEngineRepo\Source\GameEngine\Button.cpp(23,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\GameEngineRepo\Source\GameEngine\Button.cpp(23,24): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Collider.cpp
+  GameObject.cpp
+C:\GameEngineRepo\Source\GameEngine\GameObject.cpp(21,27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  GameObjectManager.cpp
+C:\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(13,20): warning C4018: '<': signed/unsigned mismatch
+C:\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(46,20): warning C4018: '<': signed/unsigned mismatch
+  HUDElement.cpp
+  InputManager.cpp
+C:\GameEngineRepo\Source\GameEngine\InputManager.cpp(32,45): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\InputManager.cpp(36,45): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\InputManager.cpp(40,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\InputManager.cpp(44,48): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Manager.cpp
+  ManagerOfManagers.cpp
+  PhysicsManager.cpp
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(8,20): warning C4018: '<': signed/unsigned mismatch
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(11,26): warning C4018: '<': signed/unsigned mismatch
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(73,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(77,90): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(77,73): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(77,56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(77,39): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(85,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(89,80): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(89,63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(89,46): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(89,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(117,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(121,38): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(125,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(129,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(133,38): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(137,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(141,53): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(141,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(153,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(157,38): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(161,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(165,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(169,38): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(173,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(177,53): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(177,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(184,20): warning C4018: '<': signed/unsigned mismatch
+  RenderManager.cpp
+C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(23,21): warning C4018: '<': signed/unsigned mismatch
+C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(28,21): warning C4018: '<': signed/unsigned mismatch
+C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(118,27): warning C4018: '<': signed/unsigned mismatch
+C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(120,94): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(120,65): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(126,23): warning C4018: '<': signed/unsigned mismatch
+C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(138,23): warning C4018: '<': signed/unsigned mismatch
+  Text.cpp
+C:\GameEngineRepo\Source\GameEngine\Text.cpp(19,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\GameEngineRepo\Source\GameEngine\Text.cpp(19,24): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Texture.cpp
+  TimeManager.cpp
+C:\GameEngineRepo\Source\GameEngine\TimeManager.cpp(37,9): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  Transform.cpp
+C:\GameEngineRepo\Source\GameEngine\Transform.cpp(13,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Vector2.cpp
+  Entity.cpp
+  Scene.cpp
+  SceneManager.cpp
   GameEngine.vcxproj -> C:\GameEngineRepo\Projects\Release\GameEngine.lib
