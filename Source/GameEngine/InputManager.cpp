@@ -4,13 +4,29 @@
 
 InputManager::~InputManager()
 {
+
 }
 
 void InputManager::Update(void)
 {
-  mCurrentKeyStates = SDL_GetKeyboardState(NULL);
-  
-   SDL_GetMouseState(&mouseX, &mouseY);
+	mCurrentKeyStates = SDL_GetKeyboardState(NULL);
+
+	keysDown.clear();
+	keysUp.clear();
+	for (int i = 0; i < 255; i++) {
+		if (mCurrentKeyStates[i] != 0 && !KeyOnVector(i, keysPressed))
+		{
+			keysDown.push_back(i);
+			keysPressed.push_back(i);
+		}
+		if (mCurrentKeyStates[i] == 0 && KeyOnVector(i, keysPressed))
+		{
+			keysPressed.erase(remove(keysPressed.begin(), keysPressed.end(), i), keysPressed.end());
+			keysUp.push_back(i);
+		}
+	}
+
+	SDL_GetMouseState(&mouseX, &mouseY);
 }
 /*****************************************************************************/
 
@@ -19,16 +35,28 @@ Vector2 InputManager::GetMousePosition() {
 }
 
 bool InputManager::GetKey(int scanCode)
+{	
+	return mCurrentKeyStates[scanCode] != 0;
+}
+
+bool InputManager::GetKeyDown(int scanCode)
 {
-  return mCurrentKeyStates[scanCode] != 0;
+	return KeyOnVector(scanCode, keysDown);
+}
+
+bool InputManager::GetKeyUp(int scanCode)
+{
+	return KeyOnVector(scanCode, keysUp);
+}
+
+bool InputManager::KeyOnVector(int code, vector<int> vec)
+{
+	return find(vec.begin(), vec.end(), code) != vec.end();
 }
 
 bool InputManager::GetMouseButton(int index)
 {
-	if (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(index)) {
-		return true;
-	}
-	return false;
+	return SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(index);
 }
 
 /*******************************************************************************************/

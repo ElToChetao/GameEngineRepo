@@ -8,7 +8,7 @@ Leaf::Leaf(Vector2 position):GameObject()
 	transform.position = position;
 	
 	transform.rotation = rand() % 360;
-	int option = rand()%3;
+	int option = rand() % 3;
 
 	switch (option)
 	{
@@ -29,9 +29,7 @@ Leaf::Leaf(Vector2 position):GameObject()
 
 void Leaf::update()
 {
-	GameObject::update();
 	float dt = TimeManager::GetInstance().getDeltaTime();
-	//leafMovement(dt);
 
 	if(transform.position.x < 0 || transform.position.x > RenderManager::GetInstance().SCREEN_WIDTH
 	|| transform.position.y < 0 || transform.position.y > RenderManager::GetInstance().SCREEN_HEIGHT)

@@ -12,7 +12,6 @@ using namespace std;
 class GameObject {	
 public:
 	Transform transform;
-
 	bool isActive;
 	
 	string name;
@@ -37,10 +36,9 @@ public:
 	template <typename T>
 	T* getComponent();
 
-	virtual void update() {
-		transform.UpdatePhysics();
-	};
+	virtual void update() {};
 	virtual void onDestroy() {};
+
 	virtual void onCollisionStay(GameObject *other) {};
 	virtual void onCollisionEnter(GameObject* other) {};
 	virtual void onCollisionExit(GameObject* other) {};

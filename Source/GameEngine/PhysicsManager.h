@@ -14,7 +14,7 @@ private:
 	// Private constructor to avoid more than one instance
 	PhysicsManager();
 public:
-
+	double gravity = 9.8;
 	void Update();
 	
 	double distanceSquared(int x1, int y1, int x2, int y2);

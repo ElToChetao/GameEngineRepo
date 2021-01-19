@@ -8,6 +8,7 @@ void PhysicsManager::Update() {
 	for (int i = 0; i < go.size(); i++) {
 		if (go[i]->collider != NULL)
 		{
+			go[i]->transform.UpdatePhysics();
 			for (int j = i + 1; j < go.size(); j++)
 			{
 				if (go[j]->collider != NULL)
