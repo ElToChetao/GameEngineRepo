@@ -49,16 +49,17 @@ void GameObjectManager::RemoveGameObject(GameObject* go) {
 	{
 		if (gameObjects[i] == go)
 		{
+			go->onDestroy();
 			gameObjects.erase(gameObjects.begin() + i);
 		}
 	}
 }
 
-void GameObjectManager::AddGameObject(Manager* go) {
+void GameObjectManager::AddManager(Manager* go) {
 	managers.push_back(go);
 }
 
-void GameObjectManager::RemoveGameObject(Manager* go) {
+void GameObjectManager::RemoveManager(Manager* go) {
 	managers.erase(remove(managers.begin(), managers.end(), go), managers.end());
 }
 

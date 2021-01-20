@@ -26,8 +26,8 @@ public:
 
 	void AddGameObject(GameObject* go);
 	void RemoveGameObject(GameObject* go);
-	void AddGameObject(Manager* go);
-	void RemoveGameObject(Manager* go);
+	void AddManager(Manager* go);
+	void RemoveManager(Manager* go);
 
 	Manager* GetManager(string name);
 

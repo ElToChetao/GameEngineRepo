@@ -4,18 +4,13 @@
 #include "GameObject.h"
 using namespace std;
 
-class Manager {
+class Manager : public Entity{
 
 public:
-	string name;
-	string tag;
-
 	Manager();
 	Manager(string tag);
 
 	void destroy(GameObject* other);
-
-	void setTag(string tag) { this->tag = tag; }
 
 	virtual void update() {};
 };

@@ -25,15 +25,6 @@ int main( int argc, char* args[] )
 		// GameObject instances
 		LeafManager leafManager;
 		Car car;
-
-		AudioManager::GetInstance().PlaySound("../../Media/Sounds/music.wav", 20);
-		RenderManager::GetInstance().SetBackgroundColor(42, 212, 83);
-
-		string s = "numero";
-		int num = 10;
-		SaveSystem::Save<int>(num, s);
-		bool b = SaveSystem::SaveExists("hola");
-		cout << b;
 		
 		// While application is running
 		while( ManagerOfManagers::GetInstance().gameRunning)

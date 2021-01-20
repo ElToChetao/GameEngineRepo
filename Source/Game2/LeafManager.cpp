@@ -11,7 +11,6 @@ LeafManager::LeafManager()
 	this->fuelCounter = 10;
 	this->currentFuelCounter = 0;
 	this->isEndGame = false;
-	
 
 	if (SaveSystem::SaveExists("Score"))
 	{
@@ -20,6 +19,9 @@ LeafManager::LeafManager()
 	}
 		
 	button->addText("PLAY");
+
+	AudioManager::GetInstance().PlaySound("../../Media/Sounds/music.wav", 20);
+	RenderManager::GetInstance().SetBackgroundColor(42, 212, 83);
 }
 
 LeafManager::~LeafManager()
@@ -30,7 +32,7 @@ LeafManager::~LeafManager()
 
 void LeafManager::update()
 {
-	if (button != NULL && button->MouseOverButton())
+	if (button != NULL && button->Pressed())
 	{
 		gameStarted = true;
 		button->isActive = false;

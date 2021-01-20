@@ -1,13 +1,21 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: El directorio intermedio (Release\) contiene archivos compartidos de otro proyecto (Game.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (Game.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Car.cpp
+C:\GameEngineRepo\Source\Game2\Car.cpp(20,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\Car.cpp(49,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\Car.cpp(68,21): warning C4305: '+=': truncation from 'double' to 'float'
+  Leaf.cpp
+C:\GameEngineRepo\Source\Game2\Leaf.cpp(37,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\Leaf.cpp(55,22): warning C4305: '*=': truncation from 'double' to 'float'
   LeafManager.cpp
-D:\Git\GameEngineRepo\Source\Game2\LeafManager.cpp(41,12): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Git\GameEngineRepo\Source\Game2\LeafManager.cpp(67,10): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Git\GameEngineRepo\Source\Game2\LeafManager.cpp(68,10): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Git\GameEngineRepo\Source\Game2\LeafManager.cpp(77,10): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Git\GameEngineRepo\Source\Game2\LeafManager.cpp(78,10): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-  Generando código
-  2 of 800 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(43,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(69,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(70,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(79,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GameEngineRepo\Source\Game2\LeafManager.cpp(80,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  main.cpp
+  Generating code
+  14 of 805 functions ( 1.7%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
-  Generación de código finalizada
-  Game2.vcxproj -> D:\Git\GameEngineRepo\Projects\Release\Game2.exe
+    46 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Game2.vcxproj -> C:\GameEngineRepo\Projects\Release\Game2.exe

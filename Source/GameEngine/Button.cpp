@@ -18,6 +18,11 @@ bool Button::MouseOverButton()
 		mousePostion.y > position.y && mousePostion.y < position.y + sprite.getHeight();
 }
 
+bool Button::Pressed()
+{
+	return InputManager::GetInstance().GetMouseButton(1) && MouseOverButton();
+}
+
 void Button::renderHUD()
 {
 	sprite.render(position.x, position.y);

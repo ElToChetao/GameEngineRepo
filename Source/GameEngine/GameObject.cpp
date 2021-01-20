@@ -53,13 +53,3 @@ void GameObject::rotate(double degree)
 void GameObject::destroy(GameObject *other) {
 	GameObjectManager::GetInstance().RemoveGameObject(other);
 }
-
-template <typename T>
-T* GameObject::getComponent() 
-{
-	if (T* t = dynamic_cast<T*>(this))
-	{
-		return t;
-	}
-	return NULL;
-}

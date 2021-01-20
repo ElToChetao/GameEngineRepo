@@ -127,6 +127,7 @@
     <ClCompile Include="..\..\Source\GameEngine\AudioManager.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\Button.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\Collider.cpp" />
+    <ClCompile Include="..\..\Source\GameEngine\Entity.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\GameObject.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\GameObjectManager.cpp" />
     <ClCompile Include="..\..\Source\GameEngine\HUDElement.cpp" />
@@ -146,6 +147,7 @@
     <ClInclude Include="..\..\Source\GameEngine\AudioManager.h" />
     <ClInclude Include="..\..\Source\GameEngine\Button.h" />
     <ClInclude Include="..\..\Source\GameEngine\Collider.h" />
+    <ClInclude Include="..\..\Source\GameEngine\Entity.h" />
     <ClInclude Include="..\..\Source\GameEngine\GameObject.h" />
     <ClInclude Include="..\..\Source\GameEngine\GameObjectManager.h" />
     <ClInclude Include="..\..\Source\GameEngine\HUDElement.h" />
