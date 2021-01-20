@@ -25,6 +25,13 @@ Leaf::Leaf(Vector2 position):GameObject()
 	
 	addCollider(32);
 	transform.SetFrictionValue(0.97);
+
+	double x = -10 + static_cast <double> (rand()) / (static_cast <double> (RAND_MAX / (30 + 10)));
+	double y = -10 + static_cast <double> (rand()) / (static_cast <double> (RAND_MAX / (30 + 10)));
+
+	double r = -10 + static_cast <double> (rand()) / (static_cast <double> (RAND_MAX / (30 + 10)));
+	transform.AddForce(Vector2(x, y));
+	transform.AddTorque(30);
 }
 
 Leaf::~Leaf()
@@ -58,4 +65,5 @@ void Leaf::leafMovement(float dt)
 void Leaf::addForce(Vector2 direction, float magnitude)
 {
 	transform.AddForce(-direction * magnitude);
+	transform.AddTorque(magnitude);
 }

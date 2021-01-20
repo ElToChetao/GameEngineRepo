@@ -14,6 +14,7 @@ class GameObjectManager:public Singleton<GameObjectManager>
 private:
 	vector<GameObject*> gameObjects;
 	vector<Manager*> managers;
+
 	GameObjectManager();
 	~GameObjectManager();
 public:

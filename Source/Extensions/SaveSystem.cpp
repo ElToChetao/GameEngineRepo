@@ -18,6 +18,7 @@ bool SaveSystem::KeyExists(std::string key) {
         file.close();
         return false;
     }
+    return false;
 }
 
 bool SaveSystem::SaveExists(std::string key) {
@@ -41,4 +42,5 @@ std::string SaveSystem::GetValue(std::string key) {
         file.close();
         return "";
     }
+    return "";
 }

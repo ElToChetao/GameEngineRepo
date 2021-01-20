@@ -4,7 +4,8 @@
 class Transform {
 	Vector2 force;
 	double friction;
-	
+
+	double torqueForce;
 public:
 	Vector2 position;
 	Vector2 size;
@@ -16,5 +17,6 @@ public:
 	Transform();
 	void UpdatePhysics();
 	void AddForce(Vector2 force);
+	void AddTorque(double force);
 	void SetFrictionValue(double value) { friction = value; };
 };

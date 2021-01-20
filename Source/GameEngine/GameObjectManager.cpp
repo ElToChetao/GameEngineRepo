@@ -4,7 +4,7 @@ GameObjectManager::GameObjectManager() {}
 
 GameObjectManager::~GameObjectManager()
 {
-	for (int i = 0; i < gameObjects.size(); i++)
+	/*for (int i = 0; i < gameObjects.size(); i++)
 	{
 		delete gameObjects[i];
 	}
@@ -12,7 +12,7 @@ GameObjectManager::~GameObjectManager()
 	for (int i = 0; i < managers.size(); i++)
 	{
 		delete managers[i];
-	}
+	}*/
 
 	managers.clear();
 	gameObjects.clear();
@@ -32,8 +32,8 @@ vector<GameObject*> GameObjectManager::GetGameObjects() {
 void GameObjectManager::Init() {
 }
 
-void GameObjectManager::Update() {
-	
+void GameObjectManager::Update() 
+{
 	for (int i = managers.size()-1; i >= 0 ; i--) 
 	{
 		managers[i]->update();

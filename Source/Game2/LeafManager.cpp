@@ -15,10 +15,13 @@ LeafManager::LeafManager()
 
 	if (SaveSystem::SaveExists("Score"))
 	{
+		printf("fornite");
 		this->highScore = SaveSystem::Load<int>("Score");
 		this->highScoreText.UpdateContent("HIGHSCORE: " + to_string(this->highScore));
 	}
 		
+	RenderManager::GetInstance().SetBackgroundColor(42, 212, 83);
+
 	button->addText("PLAY");
 }
 
@@ -30,11 +33,12 @@ LeafManager::~LeafManager()
 
 void LeafManager::update()
 {
-	if (button != NULL && button->MouseOverButton())
+	if (button->isActive && button->Pressed())
 	{
 		gameStarted = true;
 		button->isActive = false;
-		endScore.UpdateContent("");
+		endScore.UpdateContent(" ");
+		AudioManager::GetInstance().PlaySound("../../Media/Sounds/music.wav", 20);
 	}
 	if (gameStarted) 
 	{
@@ -94,13 +98,13 @@ void LeafManager::addPoint()
 void LeafManager::endGame()
 {
 	gameStarted = false;
-	endScore.UpdateContent(to_string(points));
+	endScore.UpdateContent("FINAL SCORE: " + to_string(points));
 
 	if (points > highScore)
 	{
 		SaveSystem::Save(points, "Score");
 		highScore = points;
-		highScoreText.UpdateContent(to_string(points));
+		highScoreText.UpdateContent("HIGHSCORE: " + to_string(points));
 	}
 		
 	button->isActive = true;
