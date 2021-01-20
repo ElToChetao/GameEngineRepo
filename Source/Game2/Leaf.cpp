@@ -42,16 +42,14 @@ Leaf::~Leaf()
 void Leaf::update()
 {
 	float dt = TimeManager::GetInstance().getDeltaTime();
-	if(transform.position.x < 0 || transform.position.x >= RenderManager::GetInstance().SCREEN_WIDTH
-	|| transform.position.y < 0 || transform.position.y >= RenderManager::GetInstance().SCREEN_HEIGHT)
+	if(transform.position.x < 0 || transform.position.x >= (double)RenderManager::GetInstance().SCREEN_WIDTH - 10 
+	|| transform.position.y < 0 || transform.position.y >= (double)RenderManager::GetInstance().SCREEN_HEIGHT - 10)
 	{
 		LeafManager* p = dynamic_cast<LeafManager*>(GameObjectManager::GetInstance().GetManager("LeafManager"));
-		if (p != nullptr)
-		{
-			p->addPoint();
-		}
+		p->addPoint();
+
 		AudioManager::GetInstance().PlaySound("../../Media/Sounds/leaf.wav");
-		destroy(this);
+		GameObjectManager::GetInstance().RemoveGameObject(this);
 	}
 }
 

@@ -15,6 +15,11 @@ Car::Car():GameObject()
 	addCollider();
 }
 
+Car::~Car()
+{
+	free(leafManager);
+}
+
 void Car::update()
 {
 	float dt = TimeManager::GetInstance().getDeltaTime();
@@ -43,7 +48,7 @@ void Car::updatePosition(float dt)
 	Vector2 targetPostion = InputManager::GetInstance().GetMousePosition();
 	targetPostion.x -= (transform.size.x / 2);
 	targetPostion.y -= (transform.size.y / 2);
-	transform.position = transform.position.lerp(targetPostion, dt * 10);
+	transform.position = transform.position.lerp(targetPostion, (double)dt * 10);
 
 	Vector2 direction = oldPosition.direction(targetPostion);
 	currentForce = sqrt(direction.x * direction.x + direction.y * direction.y);
@@ -70,6 +75,6 @@ void Car::onCollisionEnter(GameObject* obj)
 		{
 			currentFuel = 1;
 		}
-		destroy(p);
+		GameObjectManager::GetInstance().RemoveGameObject(p);
 	}
 }

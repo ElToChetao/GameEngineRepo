@@ -15,6 +15,8 @@ public:
 	bool gravityEnabled;
 
 	Transform();
+	~Transform();
+
 	void UpdatePhysics();
 	void AddForce(Vector2 force);
 	void AddTorque(double force);

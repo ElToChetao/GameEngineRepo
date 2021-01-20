@@ -8,4 +8,5 @@ class Fuel :public GameObject
 {
 	public:
 		Fuel(Vector2 startingPosition);
+		~Fuel();
 };

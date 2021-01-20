@@ -21,6 +21,10 @@ Vector2::Vector2(double a)
 	this->y = a;
 }
 
+Vector2::~Vector2()
+{
+}
+
 Vector2::Vector2(double x, double y) {
 	this->x = x;
 	this->y = y;

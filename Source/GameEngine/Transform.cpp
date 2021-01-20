@@ -3,11 +3,17 @@
 #include "TimeManager.h"
 #include <math.h> 
 
-Transform::Transform() {
+Transform::Transform() 
+{
 	rotation = 0;
 	friction = 0.99;
 	force = Vector2::ZERO;
 	gravityEnabled = false;
+}
+
+Transform::~Transform()
+{
+
 }
 
 void Transform::UpdatePhysics()

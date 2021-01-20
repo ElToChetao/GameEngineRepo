@@ -2,6 +2,10 @@
 
 PhysicsManager::PhysicsManager(){}
 
+PhysicsManager::~PhysicsManager()
+{
+}
+
 void PhysicsManager::Update() {
 	vector<GameObject*> go = GameObjectManager::GetInstance().GetGameObjects();
 

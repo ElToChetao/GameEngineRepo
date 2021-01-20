@@ -4,21 +4,30 @@ GameObjectManager::GameObjectManager() {}
 
 GameObjectManager::~GameObjectManager()
 {
-	/*for (int i = 0; i < gameObjects.size(); i++)
+	printf("si o q \n");
+	for (int i = gameObjects.size()-1; i >= 0; i--)
 	{
+		printf("ee");
 		delete gameObjects[i];
+		printf("oo");
 	}
+	printf("SI");
+	gameObjects.clear();
 
-	for (int i = 0; i < managers.size(); i++)
+	printf("si o q \n");
+	
+	for (int i = managers.size()-1; i >= 0; i--)
 	{
 		delete managers[i];
-	}*/
+	}
+
+	printf("si o q \n");
 
 	managers.clear();
-	gameObjects.clear();
 }
 
-vector<GameObject*> GameObjectManager::GetGameObjects() {
+vector<GameObject*> GameObjectManager::GetGameObjects()
+{
 	vector<GameObject*> activeObjects;
 
 	for (int i = 0; i < gameObjects.size(); i++) {
@@ -39,38 +48,46 @@ void GameObjectManager::Update()
 		managers[i]->update();
 	}
 
-	for (int i = gameObjects.size()-1; i >= 0 ; i--) {
+	for (int i = gameObjects.size()-1; i >= 0 ; i--) 
+	{
 		if (gameObjects[i] != NULL || gameObjects[i] != nullptr && gameObjects[i]->isActive)
 		{
 			gameObjects[i]->update();
 		}
 	}
+
+	//Free
+	for (int i = 0; i < destroy.size();	)
+	{
+		delete destroy[i];
+		destroy.erase(destroy.begin() + i);
+	}
 }
 
-void GameObjectManager::Destroy() {
-
-}
-
-void GameObjectManager::AddGameObject(GameObject* go) {
+void GameObjectManager::AddGameObject(GameObject* go) 
+{
 	gameObjects.push_back(go);
 }
 
-void GameObjectManager::RemoveGameObject(GameObject* go) {
+void GameObjectManager::RemoveGameObject(GameObject* go)
+{
 	for (int i = 0; i < gameObjects.size(); i++)
 	{
 		if (gameObjects[i] == go)
 		{
-			delete gameObjects[i];
+			destroy.push_back(gameObjects[i]);
 			gameObjects.erase(gameObjects.begin() + i);
 		}
 	}
 }
 
-void GameObjectManager::AddManager(Manager* go) {
+void GameObjectManager::AddManager(Manager* go) 
+{
 	managers.push_back(go);
 }
 
-void GameObjectManager::RemoveManager(Manager* go) {
+void GameObjectManager::RemoveManager(Manager* go)
+{
 
 	for (int i = 0; i < managers.size(); i++)
 	{

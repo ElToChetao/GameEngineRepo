@@ -1,24 +1,6 @@
-﻿  Entity.cpp
-  GameObject.cpp
-  GameObjectManager.cpp
-C:\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(24,20): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(49,20): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(71,20): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(88,20): warning C4018: '<': signed/unsigned mismatch
-  Manager.cpp
-  ManagerOfManagers.cpp
-  PhysicsManager.cpp
-C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(8,20): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(12,26): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(185,20): warning C4018: '<': signed/unsigned mismatch
-  RenderManager.cpp
-C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(23,25): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(30,25): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(121,27): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(123,94): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(123,65): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(129,23): warning C4018: '<': signed/unsigned mismatch
-C:\GameEngineRepo\Source\GameEngine\RenderManager.cpp(141,23): warning C4018: '<': signed/unsigned mismatch
-  Transform.cpp
-C:\GameEngineRepo\Source\GameEngine\Transform.cpp(15,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  GameEngine.vcxproj -> C:\GameEngineRepo\Projects\Release\GameEngine.lib
+﻿  GameObjectManager.cpp
+D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(33,20): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(60,20): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(74,20): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(92,20): warning C4018: '<': no coinciden signed/unsigned
+  GameEngine.vcxproj -> D:\Git\GameEngineRepo\Projects\Release\GameEngine.lib

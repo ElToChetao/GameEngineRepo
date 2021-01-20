@@ -15,6 +15,7 @@ public:
 	Vector2();
 	Vector2(double x, double y);
 	Vector2(double a);
+	~Vector2();
 
 	Vector2 direction(Vector2 a);
 	Vector2 normalize();

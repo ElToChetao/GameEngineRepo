@@ -15,7 +15,6 @@ LeafManager::LeafManager()
 
 	if (SaveSystem::SaveExists("Score"))
 	{
-		printf("fornite");
 		this->highScore = SaveSystem::Load<int>("Score");
 		this->highScoreText.UpdateContent("HIGHSCORE: " + to_string(this->highScore));
 	}
@@ -35,6 +34,7 @@ void LeafManager::update()
 {
 	if (button->isActive && button->Pressed())
 	{
+		points = 0;
 		gameStarted = true;
 		button->isActive = false;
 		endScore.UpdateContent(" ");
@@ -46,18 +46,18 @@ void LeafManager::update()
 		currentLeafCounter += dt;
 		currentFuelCounter += dt;
 
-		if (currentLeafCounter >= newLeafCounter)
+		if (currentLeafCounter > newLeafCounter)
 		{
 			for (int i = 0; i < amountOfLeaves; i++)
 			{
 				newLeaf();
 			}
 
-			amountOfLeaves = rand() % 10 + 5;
+			amountOfLeaves = rand() % 3 + 5;
 
 			currentLeafCounter = 0;
 		}
-		if (currentFuelCounter >= fuelCounter)
+		if (currentFuelCounter > fuelCounter)
 		{
 			newFuel();
 			fuelCounter = 10 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (20 - 10)));

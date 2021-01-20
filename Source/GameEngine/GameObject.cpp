@@ -8,6 +8,7 @@ GameObject::GameObject() {
 
 GameObject::~GameObject()
 {
+	printf("Get Out\n");
 	delete collider;
 }
 

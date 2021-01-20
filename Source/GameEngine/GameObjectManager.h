@@ -10,20 +10,21 @@
 
 class GameObjectManager:public Singleton<GameObjectManager>
 {
-	friend class Singleton<GameObjectManager>;
 private:
+	friend class Singleton<GameObjectManager>;
 	vector<GameObject*> gameObjects;
 	vector<Manager*> managers;
+	vector<GameObject*> destroy;
 
 	GameObjectManager();
 	~GameObjectManager();
+	
 public:
 	vector<GameObject*> GetGameObjects();
 
 	void Init();
-
+	
 	void Update();
-	void Destroy();
 
 	void AddGameObject(GameObject* go);
 	void RemoveGameObject(GameObject* go);

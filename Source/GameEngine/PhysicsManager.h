@@ -13,6 +13,7 @@ class PhysicsManager :public Singleton<PhysicsManager>
 private:
 	// Private constructor to avoid more than one instance
 	PhysicsManager();
+	~PhysicsManager();
 
 	double DistanceSquared(double x1, double y1, double x2, double y2);
 

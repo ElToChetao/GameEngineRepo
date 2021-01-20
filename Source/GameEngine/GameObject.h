@@ -19,8 +19,8 @@ public:
 	Collider* collider = NULL;
 
 	GameObject();
-	~GameObject();
 	GameObject(string tag);
+	~GameObject();
 
 	void translate(Vector2 offset);
 	void rotate(double degree);

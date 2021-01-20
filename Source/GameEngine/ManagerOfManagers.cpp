@@ -55,10 +55,12 @@ void ManagerOfManagers::Update(void) {
 	audioThread.join();
 }
 
-void ManagerOfManagers::Exit() {
+void ManagerOfManagers::Exit()
+{
 	gameRunning = false;
 }
-void ManagerOfManagers::Destroy(void) {
+void ManagerOfManagers::Destroy(void) 
+{
 	AudioManager::DestroySingleton();
 	RenderManager::DestroySingleton();
 	GameObjectManager::DestroySingleton();
@@ -66,6 +68,7 @@ void ManagerOfManagers::Destroy(void) {
 	InputManager::DestroySingleton();
 	TimeManager::DestroySingleton();
 	ManagerOfManagers::DestroySingleton();
+
 	SDL_Quit();
 	exit(0);
 }

@@ -19,6 +19,7 @@ class Car :public GameObject
 		LeafManager* leafManager;
 
 		Car();
+		~Car();
 		void update() override;
 
 		void updatePosition(float dt);
