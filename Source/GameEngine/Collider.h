@@ -8,4 +8,5 @@ public:
 
 	Collider();
 	Collider(float radius);
+	~Collider();
 };

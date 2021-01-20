@@ -5,6 +5,14 @@ GameObject::GameObject() {
 	isActive = true;
 	GameObjectManager::GetInstance().AddGameObject(this);
 }
+
+GameObject::~GameObject()
+{
+	texture->free();
+	delete texture;
+	delete collider;
+}
+
 GameObject::GameObject(string tag) {
 	isActive = true;
 	setTag(tag);

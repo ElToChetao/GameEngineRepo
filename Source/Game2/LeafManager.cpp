@@ -10,6 +10,7 @@ LeafManager::LeafManager()
 	this->currentLeafCounter = 0;
 	this->fuelCounter = 10;
 	this->currentFuelCounter = 0;
+	this->isEndGame = false;
 	
 
 	if (SaveSystem::SaveExists("Score"))
@@ -29,13 +30,12 @@ LeafManager::~LeafManager()
 
 void LeafManager::update()
 {
-	//if (InputManager::GetInstance().GetKey())
 	if (button != NULL && button->MouseOverButton())
 	{
 		gameStarted = true;
-		delete button;
+		button->isActive = false;
+		endScore.UpdateContent("");
 	}
-
 	if (gameStarted) 
 	{
 		float dt = TimeManager::GetInstance().getDeltaTime();
@@ -79,8 +79,8 @@ void LeafManager::newLeaf()
 
 	Vector2 startPosition = RenderManager::GetInstance().GetScreenAdaptedPosition(x, y);
 
-	Leaf* p = new Leaf (startPosition);
-
+	Leaf* p = new Leaf(startPosition);
+	numSpawn++;
 	leavesOnScreen++;
 }
 
@@ -89,4 +89,21 @@ void LeafManager::addPoint()
 	points++;
 	leavesOnScreen--;
 	score.UpdateContent(to_string(points));
+}
+
+void LeafManager::endGame()
+{
+	gameStarted = false;
+	endScore.UpdateContent(to_string(points));
+	button->isActive = true;
+	currentLeafCounter = 0;
+	currentFuelCounter = 0;
+
+	if (points > highScore)
+		SaveSystem::Save(points, "Score");
+}
+
+bool LeafManager::isGameStarted()
+{
+	return gameStarted;
 }

@@ -13,27 +13,30 @@ RenderManager::RenderManager(void)
 
 RenderManager::~RenderManager(void)
 {
-  //Destroy window	
-  SDL_DestroyRenderer(mRenderer);
-  SDL_DestroyWindow(mWindow);
+      //Destroy window	
+      SDL_DestroyRenderer(mRenderer);
+      SDL_DestroyWindow(mWindow);
 
-  mWindow = NULL;
-  mRenderer = NULL;
+      mWindow = NULL;
+      mRenderer = NULL;
 
-  for (int i = 0; i < sprites.size(); i++)
-  {
-      sprites[i]->free();
-  }
-  sprites.clear();
-  for (int i = 0; i < hud.size(); i++)
-  {
-      hud[i]->sprite.free();
-  }
-  hud.clear();
+      for (int i = 0; i < sprites.size(); i++)
+      {
+          sprites[i]->free();
+      }
 
-  //Quit SDL subsystems
-  TTF_Quit();
-  IMG_Quit();
+      sprites.clear();
+
+      for (int i = 0; i < hud.size(); i++)
+      {
+          hud[i]->sprite.free();
+      }
+
+      hud.clear();
+
+      //Quit SDL subsystems
+      TTF_Quit();
+      IMG_Quit();
 }
 
 /*****************************************************************************/

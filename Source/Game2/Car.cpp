@@ -9,6 +9,7 @@ Car::Car():GameObject()
 	currentFuel = maxFuel;
 	currentForce = 0;
 	maxForce = 10;
+	leafManager = dynamic_cast<LeafManager*>(GameObjectManager::GetInstance().GetManager("LeafManager"));
 
 	addSprite("../../Media/Sprites/CarLeaf/car.png");
 	addCollider();
@@ -19,13 +20,19 @@ void Car::update()
 	float dt = TimeManager::GetInstance().getDeltaTime();
 	updatePosition(dt);
 
-	currentFuel -= dt/50;
-	fuel.UpdateContent(to_string((int) (currentFuel * 100)) + " %");
-
-	if (currentFuel <= 0)
+	if (leafManager->isGameStarted())
 	{
-		// al menu
-		printf("Sin gasolina");
+		currentFuel -= dt / 50;
+		fuel.UpdateContent(to_string((int)(currentFuel * 100)) + " %");
+
+		if (currentFuel <= 0)
+		{
+			leafManager->endGame();
+		}
+	}
+	else
+	{
+		currentFuel = maxFuel;
 	}
 }
 
@@ -40,6 +47,7 @@ void Car::updatePosition(float dt)
 
 	Vector2 direction = oldPosition.direction(targetPostion);
 	currentForce = sqrt(direction.x * direction.x + direction.y * direction.y);
+
 	if (currentForce > 5) {
 		double angle = atan2(direction.y, direction.x) - atan2(0, 1);
 		angle *= (180 / M_PI);

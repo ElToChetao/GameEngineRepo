@@ -13,6 +13,7 @@ class Leaf:public GameObject
 		float currentSpeed;
 
 		Leaf(Vector2 startingPosition);
+		~Leaf();
 		void update() override;
 
 		void addForce(Vector2 direction, float magnitude);

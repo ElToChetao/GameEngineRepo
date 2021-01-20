@@ -22,12 +22,14 @@ void GameObjectManager::Init() {
 }
 
 void GameObjectManager::Update() {
-	for (int i = managers.size()-1; i >= 0 ; i--) {
+	
+	for (int i = managers.size()-1; i >= 0 ; i--) 
+	{
 		managers[i]->update();
 	}
 
 	for (int i = gameObjects.size()-1; i >= 0 ; i--) {
-		if (gameObjects[i] != NULL || gameObjects[i] != nullptr)
+		if (gameObjects[i] != NULL || gameObjects[i] != nullptr && gameObjects[i]->isActive)
 		{
 			gameObjects[i]->update();
 		}

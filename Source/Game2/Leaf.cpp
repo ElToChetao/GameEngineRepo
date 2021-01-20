@@ -27,12 +27,16 @@ Leaf::Leaf(Vector2 position):GameObject()
 	transform.SetFrictionValue(0.97);
 }
 
+Leaf::~Leaf()
+{
+
+}
+
 void Leaf::update()
 {
 	float dt = TimeManager::GetInstance().getDeltaTime();
-
-	if(transform.position.x < 0 || transform.position.x > RenderManager::GetInstance().SCREEN_WIDTH
-	|| transform.position.y < 0 || transform.position.y > RenderManager::GetInstance().SCREEN_HEIGHT)
+	if(transform.position.x < 0 || transform.position.x >= RenderManager::GetInstance().SCREEN_WIDTH
+	|| transform.position.y < 0 || transform.position.y >= RenderManager::GetInstance().SCREEN_HEIGHT)
 	{
 		LeafManager* p = dynamic_cast<LeafManager*>(GameObjectManager::GetInstance().GetManager("LeafManager"));
 		if (p != nullptr)

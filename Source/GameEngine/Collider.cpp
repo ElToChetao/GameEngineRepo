@@ -13,3 +13,8 @@ Collider::Collider(float radius)
 	isRect = false;
 	isOnCollision = false;
 }
+
+Collider::~Collider()
+{
+
+}

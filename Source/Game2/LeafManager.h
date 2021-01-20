@@ -15,6 +15,8 @@ class LeafManager : public Manager
 		int highScore;
 		int leavesOnScreen;
 		int amountOfLeaves;
+		int numSpawn;
+		bool isEndGame;
 
 		float newLeafCounter;
 		float currentLeafCounter;
@@ -27,6 +29,7 @@ class LeafManager : public Manager
 
 		Text score = Text(Vector2(RenderManager::GetInstance().SCREEN_WIDTH * 0.5, 10), "0");
 		Text highScoreText = Text(Vector2(RenderManager::GetInstance().SCREEN_WIDTH * 0.8, 10), "HIGHSCORE: 0");
+		Text endScore = Text(Vector2(RenderManager::GetInstance().SCREEN_WIDTH * 0.5, RenderManager::GetInstance().SCREEN_HEIGHT * 0.5), "");
 
 	public:
 		LeafManager();
@@ -37,4 +40,6 @@ class LeafManager : public Manager
 		void newLeaf();
 		void newFuel();
 		void addPoint();
+		void endGame();
+		bool isGameStarted();
 };

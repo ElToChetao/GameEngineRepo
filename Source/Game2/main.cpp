@@ -23,8 +23,8 @@ int main( int argc, char* args[] )
 	{
 		RenderManager::GetInstance().HideCursor();
 		// GameObject instances
-		Car car;
 		LeafManager leafManager;
+		Car car;
 
 		AudioManager::GetInstance().PlaySound("../../Media/Sounds/music.wav", 20);
 		RenderManager::GetInstance().SetBackgroundColor(42, 212, 83);

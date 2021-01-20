@@ -21,6 +21,7 @@ public:
 	Collider* collider = NULL;
 
 	GameObject();
+	~GameObject();
 	GameObject(string tag);
 
 	void translate(Vector2 offset);

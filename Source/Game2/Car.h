@@ -1,4 +1,7 @@
+#pragma once
+
 #include "ManagerOfManagers.h"
+#include "LeafManager.h"
 #include "Leaf.h"
 #include "Fuel.h"
 #include "Text.h"
@@ -13,6 +16,7 @@ class Car :public GameObject
 		float maxFuel;
 		float currentForce;
 		float maxForce;
+		LeafManager* leafManager;
 
 		Car();
 		void update() override;
