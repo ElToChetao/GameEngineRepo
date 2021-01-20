@@ -1,0 +1,30 @@
+﻿  Audio.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\Audio.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  AudioManager.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\Audio.h(2,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Collider.cpp
+  GameObject.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\GameObject.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  GameObjectManager.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\GameObjectManager.h(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  HUDElement.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\HUDElement.h(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  InputManager.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\InputManager.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Manager.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\GameObject.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  ManagerOfManagers.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\ManagerOfManagers.h(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  PhysicsManager.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\PhysicsManager.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  PoolManager.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\GameObject.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  RenderManager.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\RenderManager.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Texture.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\Texture.h(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  TimeManager.cpp
+C:\GameEngine\GameEngineRepo\Source\GameEngine\TimeManager.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Transform.cpp
+  Vector2.cpp
+  Generating Code...

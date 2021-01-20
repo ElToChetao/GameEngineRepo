@@ -1,0 +1,26 @@
+﻿  Button.cpp
+  Entity.cpp
+  GameObject.cpp
+  GameObjectManager.cpp
+D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(7,20): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(12,20): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(24,20): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(59,20): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(75,20): warning C4018: '<': no coinciden signed/unsigned
+  Manager.cpp
+  ManagerOfManagers.cpp
+  PhysicsManager.cpp
+D:\Git\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(8,20): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(12,26): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\PhysicsManager.cpp(185,20): warning C4018: '<': no coinciden signed/unsigned
+  RenderManager.cpp
+D:\Git\GameEngineRepo\Source\GameEngine\RenderManager.cpp(23,25): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\RenderManager.cpp(30,25): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\RenderManager.cpp(121,27): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\RenderManager.cpp(123,94): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\GameEngine\RenderManager.cpp(123,65): warning C4244: 'argumento': conversión de 'double' a 'int'; posible pérdida de datos
+D:\Git\GameEngineRepo\Source\GameEngine\RenderManager.cpp(129,23): warning C4018: '<': no coinciden signed/unsigned
+D:\Git\GameEngineRepo\Source\GameEngine\RenderManager.cpp(141,23): warning C4018: '<': no coinciden signed/unsigned
+  Transform.cpp
+D:\Git\GameEngineRepo\Source\GameEngine\Transform.cpp(15,11): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  GameEngine.vcxproj -> D:\Git\GameEngineRepo\Projects\Release\GameEngine.lib
