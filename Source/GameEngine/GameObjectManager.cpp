@@ -1,10 +1,15 @@
 #include "GameObjectManager.h"
 
-GameObjectManager::GameObjectManager() {}
+GameObjectManager::GameObjectManager() 
+{
+	gameObjects.reserve(2000);
+	managers.reserve(3);
+	destroy.reserve(500);
+}
 
 GameObjectManager::~GameObjectManager()
 {
-	printf("si o q \n");
+	/*printf("si o q \n");
 	for (int i = gameObjects.size()-1; i >= 0; i--)
 	{
 		printf("ee");
@@ -23,7 +28,7 @@ GameObjectManager::~GameObjectManager()
 
 	printf("si o q \n");
 
-	managers.clear();
+	managers.clear();*/
 }
 
 vector<GameObject*> GameObjectManager::GetGameObjects()

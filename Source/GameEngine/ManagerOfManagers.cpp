@@ -41,18 +41,15 @@ void ManagerOfManagers::Update(void) {
 			Exit();
 		}
 	}
-
+	
 	// update all managers
-	thread inputThread(&ManagerOfManagers::InputUpdate, this);
-	thread physicThread(&ManagerOfManagers::PhysicUpdate, this);
 
-	inputThread.join();
-	physicThread.join();
+	InputUpdate();
+	PhysicUpdate();
 
 	GameObjectManager::GetInstance().Update();
-	thread audioThread(&AudioManager::Update, &AudioManager::GetInstance());
 	RenderManager::GetInstance().Update();
-	audioThread.join();
+	AudioManager::GetInstance().Update();
 }
 
 void ManagerOfManagers::Exit()

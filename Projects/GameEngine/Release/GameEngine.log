@@ -1,6 +1,2 @@
-﻿  GameObjectManager.cpp
-D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(33,20): warning C4018: '<': no coinciden signed/unsigned
-D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(60,20): warning C4018: '<': no coinciden signed/unsigned
-D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(74,20): warning C4018: '<': no coinciden signed/unsigned
-D:\Git\GameEngineRepo\Source\GameEngine\GameObjectManager.cpp(92,20): warning C4018: '<': no coinciden signed/unsigned
-  GameEngine.vcxproj -> D:\Git\GameEngineRepo\Projects\Release\GameEngine.lib
+﻿  ManagerOfManagers.cpp
+  GameEngine.vcxproj -> C:\GameEngineRepo\Projects\Release\GameEngine.lib

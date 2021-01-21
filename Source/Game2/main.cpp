@@ -25,7 +25,8 @@ int main( int argc, char* args[] )
 		// GameObject instances
 		LeafManager leafManager;
 		Car car;
-		
+
+		AudioManager::GetInstance().PlaySound("../../Media/Sounds/music.wav", 20);
 		// While application is running
 		while( ManagerOfManagers::GetInstance().gameRunning)
 		{

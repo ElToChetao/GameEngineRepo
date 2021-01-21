@@ -5,7 +5,7 @@ LeafManager::LeafManager()
 	this->name = "LeafManager";
 	this->points = 0;
 	this->leavesOnScreen = 0;
-	this->newLeafCounter = 3;
+	this->newLeafCounter = 0.8;
 	this->amountOfLeaves = 5;
 	this->currentLeafCounter = 0;
 	this->fuelCounter = 10;
@@ -38,7 +38,6 @@ void LeafManager::update()
 		gameStarted = true;
 		button->isActive = false;
 		endScore.UpdateContent(" ");
-		AudioManager::GetInstance().PlaySound("../../Media/Sounds/music.wav", 20);
 	}
 	if (gameStarted) 
 	{

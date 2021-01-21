@@ -17,7 +17,7 @@ Car::Car():GameObject()
 
 Car::~Car()
 {
-	free(leafManager);
+	
 }
 
 void Car::update()
