@@ -110,6 +110,8 @@ void LeafManager::endGame()
 	currentLeafCounter = 0;
 	currentFuelCounter = 0;
 	points = 0;
+
+	score.UpdateContent(to_string(0));
 }
 
 bool LeafManager::isGameStarted()
