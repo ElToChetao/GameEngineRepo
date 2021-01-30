@@ -1,11 +1,12 @@
 #include "ManagerOfManagers.h"
+#include <chrono>
 
 ManagerOfManagers::ManagerOfManagers() {
 	gameRunning = true;
 }
 
 bool ManagerOfManagers::Init(int w, int h) {
-
+	
 	// init all managers
 	TimeManager::CreateSingleton();
 	InputManager::CreateSingleton();
@@ -47,11 +48,17 @@ void ManagerOfManagers::Update(void) {
 		InputManager::GetInstance().Update();
 		PhysicsManager::GetInstance().Update();
 
-		mut.lock();
-		GameObjectManager::GetInstance().Update();
-		mut.unlock();
+		if (mut.try_lock()) {
+			GameObjectManager::GetInstance().Update();
+
+			mut.unlock();
+		}
+		printf("\nFin del obj");
 
 		AudioManager::GetInstance().Update();
+
+		printf("\nFin del main");
+
 	}
 	renderThread.join();
 }
@@ -59,9 +66,15 @@ void ManagerOfManagers::GraphicThread()
 {
 	while (gameRunning)
 	{
-		mut.lock();
-		RenderManager::GetInstance().Update();
-		mut.unlock();
+		if (mut.try_lock()) {
+			RenderManager::GetInstance().Update();
+
+			mut.unlock();
+			std::chrono::milliseconds timespan(17); // or whatever
+			std::this_thread::sleep_for(timespan);
+
+			printf("\n Fin del Render");
+		}
 	}
 
 	RenderManager::DestroySingleton();
@@ -71,6 +84,7 @@ void ManagerOfManagers::Exit()
 {
 	gameRunning = false;
 }
+
 void ManagerOfManagers::Destroy(void) 
 {
 	AudioManager::DestroySingleton();
