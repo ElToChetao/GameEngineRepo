@@ -5,6 +5,7 @@ ManagerOfManagers::ManagerOfManagers() {
 }
 
 bool ManagerOfManagers::Init(int w, int h) {
+
 	// init all managers
 	TimeManager::CreateSingleton();
 	InputManager::CreateSingleton();
@@ -12,10 +13,12 @@ bool ManagerOfManagers::Init(int w, int h) {
 	RenderManager::CreateSingleton();
 	PhysicsManager::CreateSingleton();
 	AudioManager::CreateSingleton();
-
 	GameObjectManager::GetInstance().Init();
-	AudioManager::GetInstance().Init();
 
+
+	RenderManager::CreateSingleton();
+
+	AudioManager::GetInstance().Init();
 	if (!RenderManager::GetInstance().Init(w, h))
 	{
 		return false;
@@ -23,33 +26,45 @@ bool ManagerOfManagers::Init(int w, int h) {
 	return true;
 }
 
-void ManagerOfManagers::PhysicUpdate() {
-	PhysicsManager::GetInstance().Update();
-}
-void ManagerOfManagers::InputUpdate() {
-	TimeManager::GetInstance().Update();
-	InputManager::GetInstance().Update();
-}
-
 void ManagerOfManagers::Update(void) {
-	SDL_Event e;
-	while (SDL_PollEvent(&e) != 0)
+
+	std::thread renderThread(&ManagerOfManagers::GraphicThread, &ManagerOfManagers::GetInstance());
+
+	while (gameRunning)
 	{
-		//User requests quit
-		if (e.type == SDL_QUIT)
+		SDL_Event e;
+		while (SDL_PollEvent(&e) != 0)
 		{
-			Exit();
+			//User requests quit
+			if (e.type == SDL_QUIT)
+			{
+				Exit();
+			}
 		}
+
+		// update all managers
+		TimeManager::GetInstance().Update();
+		InputManager::GetInstance().Update();
+		PhysicsManager::GetInstance().Update();
+
+		mut.lock();
+		GameObjectManager::GetInstance().Update();
+		mut.unlock();
+
+		AudioManager::GetInstance().Update();
 	}
-	
-	// update all managers
+	renderThread.join();
+}
+void ManagerOfManagers::GraphicThread()
+{
+	while (gameRunning)
+	{
+		mut.lock();
+		RenderManager::GetInstance().Update();
+		mut.unlock();
+	}
 
-	InputUpdate();
-	PhysicUpdate();
-
-	GameObjectManager::GetInstance().Update();
-	RenderManager::GetInstance().Update();
-	AudioManager::GetInstance().Update();
+	RenderManager::DestroySingleton();
 }
 
 void ManagerOfManagers::Exit()
@@ -59,7 +74,7 @@ void ManagerOfManagers::Exit()
 void ManagerOfManagers::Destroy(void) 
 {
 	AudioManager::DestroySingleton();
-	RenderManager::DestroySingleton();
+
 	GameObjectManager::DestroySingleton();
 	PhysicsManager::DestroySingleton();
 	InputManager::DestroySingleton();

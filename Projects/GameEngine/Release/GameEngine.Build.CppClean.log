@@ -6,7 +6,6 @@ c:\gameenginerepo\projects\gameengine\release\texture.obj
 c:\gameenginerepo\projects\gameengine\release\text.obj
 c:\gameenginerepo\projects\gameengine\release\rendermanager.obj
 c:\gameenginerepo\projects\gameengine\release\physicsmanager.obj
-c:\gameenginerepo\projects\gameengine\release\managerofmanagers.obj
 c:\gameenginerepo\projects\gameengine\release\manager.obj
 c:\gameenginerepo\projects\gameengine\release\inputmanager.obj
 c:\gameenginerepo\projects\gameengine\release\hudelement.obj
@@ -17,6 +16,7 @@ c:\gameenginerepo\projects\gameengine\release\collider.obj
 c:\gameenginerepo\projects\gameengine\release\button.obj
 c:\gameenginerepo\projects\gameengine\release\audiomanager.obj
 c:\gameenginerepo\projects\gameengine\release\audio.obj
+c:\gameenginerepo\projects\gameengine\release\managerofmanagers.obj
 c:\gameenginerepo\projects\release\gameengine.lib
 c:\gameenginerepo\projects\gameengine\release\gameengine.tlog\cl.command.1.tlog
 c:\gameenginerepo\projects\gameengine\release\gameengine.tlog\cl.read.1.tlog
