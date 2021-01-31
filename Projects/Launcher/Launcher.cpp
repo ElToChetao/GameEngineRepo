@@ -3,10 +3,14 @@
 
 #include <iostream>
 #include <windows.h>
+#include "Game.h"
 using namespace std;
 int main(int argc, TCHAR* argv[])
 {
-    int gameIndex = 0;
+    system("PAUSE");
+    Game game;
+
+    /*int gameIndex = 0;
     char exit = ' ';
     do {
         do {
@@ -25,6 +29,6 @@ int main(int argc, TCHAR* argv[])
         system("CLS");
         cout << "Wanna select other game? (Y/N)\n";
         cin >> exit;
-    } while (exit != 'N' && exit != 'n');
+    } while (exit != 'N' && exit != 'n');*/
 }
 

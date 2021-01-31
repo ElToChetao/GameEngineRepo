@@ -6,7 +6,7 @@
 Transform::Transform() 
 {
 	rotation = 0;
-	friction = 0.99;
+	friction = 0.9999;
 	force = Vector2::ZERO;
 	gravityEnabled = false;
 }

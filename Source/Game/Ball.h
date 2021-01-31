@@ -17,6 +17,7 @@ public:
 		transform.position = startPosition;
 	}
 	void update() override {
+		Vector2 lastPosition = transform.position;
 		translate(direction * speed);
 		rotate(speed * direction.x);
 
@@ -31,6 +32,7 @@ public:
 
 		if (transform.position.y < 0 || transform.position.y > RenderManager::GetInstance().SCREEN_HEIGHT - transform.size.y) {
 			direction.y *= -1;
+			transform.position = lastPosition;
 			AudioManager::GetInstance().PlaySound("../../Media/Sounds/1.wav", 20);
 		}
 	}
@@ -49,7 +51,7 @@ public:
 			if (other->tag == "paddle") {
 				direction = this->transform.position.direction(other->transform.position);
 				direction = direction.normalize();
-				speed *= 1.1;
+				speed *= 1.01;
 			}
 			AudioManager::GetInstance().PlaySound("../../Media/Sounds/1.wav", 20);
 		}

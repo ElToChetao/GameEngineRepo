@@ -20,6 +20,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game2", "Game2\Game2.vcxpro
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Launcher", "Launcher\Launcher.vcxproj", "{1EF54255-E4CC-4BBB-9404-217B40D861E2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE5D3D01-A519-4A6F-BE9B-B56DB105BFB6} = {FE5D3D01-A519-4A6F-BE9B-B56DB105BFB6}
+		{48D35296-693E-488E-8357-C7958DE80A25} = {48D35296-693E-488E-8357-C7958DE80A25}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
