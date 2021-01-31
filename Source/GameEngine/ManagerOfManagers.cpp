@@ -16,9 +16,6 @@ bool ManagerOfManagers::Init(int w, int h) {
 	AudioManager::CreateSingleton();
 	GameObjectManager::GetInstance().Init();
 
-
-	RenderManager::CreateSingleton();
-
 	AudioManager::GetInstance().Init();
 	if (!RenderManager::GetInstance().Init(w, h))
 	{
@@ -76,8 +73,6 @@ void ManagerOfManagers::GraphicThread()
 			printf("\n Fin del Render");
 		}
 	}
-
-	RenderManager::DestroySingleton();
 }
 
 void ManagerOfManagers::Exit()
@@ -88,7 +83,7 @@ void ManagerOfManagers::Exit()
 void ManagerOfManagers::Destroy(void) 
 {
 	AudioManager::DestroySingleton();
-
+	RenderManager::DestroySingleton();
 	GameObjectManager::DestroySingleton();
 	PhysicsManager::DestroySingleton();
 	InputManager::DestroySingleton();
@@ -97,4 +92,5 @@ void ManagerOfManagers::Destroy(void)
 
 	SDL_Quit();
 	exit(0);
+	system("cls");
 }
