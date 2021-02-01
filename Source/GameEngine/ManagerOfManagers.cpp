@@ -91,6 +91,4 @@ void ManagerOfManagers::Destroy(void)
 	ManagerOfManagers::DestroySingleton();
 
 	SDL_Quit();
-	exit(0);
-	system("cls");
 }

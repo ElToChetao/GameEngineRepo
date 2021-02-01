@@ -1,16 +1,11 @@
-// Launcher.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+#pragma once
 #include <iostream>
-#include <windows.h>
 #include "Game.h"
+#include "Game2.h"
 using namespace std;
-int main(int argc, TCHAR* argv[])
+int main(int argc, char* args[])
 {
-    system("PAUSE");
-    Game game;
-
-    /*int gameIndex = 0;
+    int gameIndex = 0;
     char exit = ' ';
     do {
         do {
@@ -20,15 +15,16 @@ int main(int argc, TCHAR* argv[])
 
         if (gameIndex == 0)
         {
-            system("Game.exe");
+            Game game;
         }
         else if (gameIndex == 1)
         {
-            system("Game2.exe");
+            Game2 game;
         }
         system("CLS");
         cout << "Wanna select other game? (Y/N)\n";
         cin >> exit;
-    } while (exit != 'N' && exit != 'n');*/
+    } while (exit != 'N' && exit != 'n');
+    return 0;
 }
 
